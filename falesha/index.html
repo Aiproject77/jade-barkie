@@ -329,6 +329,8 @@ details.faq p{padding:0 0 1rem;color:var(--muted);font-size:.94rem}details.faq p
  nav.main li>ul a{border:0}
 }
 
+.cv img{object-fit:contain;background:#f4f1ea}
+
 </style>
 </head>
 <body>
@@ -341,7 +343,7 @@ details.faq p{padding:0 0 1rem;color:var(--muted);font-size:.94rem}details.faq p
    <ul class="mn">
     <li class="sub"><a href="#/real-estate">Real Estate</a><ul><li><a href="#/real-estate">Listings</a></li><li><a href="#/international">International</a></li><li><a href="#/buyers">Buyers</a></li><li><a href="#/sellers">Sellers</a></li></ul></li>
     <li class="sub"><a href="#/join-the-empire">Join the Empire</a><ul><li><a href="#/coaching">Business Coaching</a></li><li><a href="#/join-the-empire">Real Estate Coaching</a></li><li><a id="labLink2" href="https://learn.falesharaquelacademy.com/communities/groups/the-business-lab/private-group" target="_blank" rel="noopener">Join the Business Lab ↗</a></li></ul></li>
-    <li class="sub"><a href="#/programs">Programs</a><ul><li><a href="https://falesharaquelacademy.com/" target="_blank" rel="noopener">Courses ↗</a></li><li><a href="#/books">Books</a></li></ul></li>
+    <li class="sub"><a href="#/programs">Programs</a><ul><li><a href="#/courses">Courses</a></li><li><a href="#/books">Books</a></li></ul></li>
     <li><a href="#/charity">Charity</a></li>
     <li><a href="#/community">Community</a></li>
     <li class="sub"><a href="#/blog">Blog</a><ul><li><a href="#/blog">Articles</a></li><li><a href="https://www.youtube.com/watch?v=XT5aUHUEkdY&amp;list=PLuT9CRUQkseCqYka0YPxDvA9YFQDaTXKn" target="_blank" rel="noopener">Media ↗</a></li></ul></li>
@@ -716,10 +718,31 @@ details.faq p{padding:0 0 1rem;color:var(--muted);font-size:.94rem}details.faq p
  <section><div class="wrap">
   <div class="cols3">
    <div class="lcard"><span class="kicker">Academy</span><h3>Business Blueprint</h3><p>Enroll in the Academy's business course.</p><a class="btn sm" href="https://falesharaquelacademy.com/businessblueprint" target="_blank" rel="noopener">Enroll now ↗</a></div>
-   <div class="lcard"><span class="kicker">Courses</span><h3>All courses</h3><p>Browse every course on the Falesha Raquel Academy.</p><a class="btn sm" id="acadLink2" href="https://falesharaquelacademy.com/" target="_blank" rel="noopener">Visit the Academy ↗</a></div>
+   <div class="lcard"><span class="kicker">Courses</span><h3>All courses</h3><p>Browse every course on the Falesha Raquel Academy.</p><a class="btn sm" href="#/courses">See the courses</a></div>
    <div class="lcard"><span class="kicker">Books</span><h3>Falesha's books</h3><p>First-time buyer and seller guides, plus Her Vision.</p><a class="btn sm" href="#/books">See the books</a></div>
   </div>
   <p style="margin-top:2rem;display:flex;gap:.7rem;flex-wrap:wrap"><a class="btn ghost" href="#/join-the-empire">Join the Empire</a><a class="btn ghost" href="#/charity">Charity</a></p>
+ </div></section>
+</div>
+
+<!-- ===== COURSES ===== -->
+<div data-page="courses" hidden>
+ <header class="ph"><img data-slot="band" alt=""><div class="wrap"><span class="kicker">Programs</span><h1>Courses</h1><p class="lead">Learn at your own pace with the Falesha Raquel Academy.</p></div></header>
+ <section><div class="wrap split">
+  <div>
+   <span class="kicker">Academy</span>
+   <h2>Falesha Raquel Academy</h2>
+   <p class="lead" style="margin-top:1rem">Falesha's online academy brings her business and real estate teaching into courses you can follow from anywhere. Start with the Business Blueprint, then explore the rest of the catalogue on the Academy site.</p>
+   <p style="margin-top:1.4rem;display:flex;gap:.7rem;flex-wrap:wrap"><a class="btn" href="https://falesharaquelacademy.com/businessblueprint" target="_blank" rel="noopener">Enroll now ↗</a><a class="btn ghost" id="acadLink2" href="https://falesharaquelacademy.com/" target="_blank" rel="noopener">Browse all courses ↗</a></p>
+  </div>
+  <div class="pic wide"><img data-slot="p23" alt="Learning with the Academy"></div>
+ </div></section>
+ <section class="ivory"><div class="wrap">
+  <div class="cols3">
+   <div class="lcard"><span class="kicker">Course</span><h3>Business Blueprint</h3><p>A step-by-step foundation for building your business.</p><a class="btn sm" href="https://falesharaquelacademy.com/businessblueprint" target="_blank" rel="noopener">Enroll now ↗</a></div>
+   <div class="lcard"><span class="kicker">Community</span><h3>The Business Lab</h3><p>A private community group for entrepreneurs inside the Academy.</p><a class="btn sm" href="https://learn.falesharaquelacademy.com/communities/groups/the-business-lab/private-group" target="_blank" rel="noopener">Join the Business Lab ↗</a></div>
+   <div class="lcard"><span class="kicker">Coaching</span><h3>Prefer one-on-one?</h3><p>Work directly with Falesha on your business or your real estate career.</p><a class="btn sm" href="#/coaching">Business coaching</a></div>
+  </div>
  </div></section>
 </div>
 
@@ -985,7 +1008,8 @@ function renderCI(){const s=S.settings,tel=x=>x.replace(/[^\d+]/g,'');$('#ci').i
  const ok=u=>/^https:\/\//.test(u||'');if(ok(s.academyUrl))$('#acadLink').href=s.academyUrl;if(ok(s.labUrl))$('#labLink').href=s.labUrl;if(ok(s.academyUrl)&&$('#acadLink2'))$('#acadLink2').href=s.academyUrl;
  $('#legal').textContent=T('brokerage')+': '+(s.brokerage||T('brokerPh'))+'. '+T('disc');$('#mock').hidden=!s.showBanner}
 const LOGO0=$('#hlogo').innerHTML;
-function renderSlots(){$$('[data-slot]').forEach(img=>{const k=img.dataset.slot,s=slotSrc(k)||(/^(book|comm)/.test(k)?'':scene('villa','dusk',hash(k)));const fb=img.parentElement.querySelector('[data-fb]');if(s){img.src=s;img.hidden=false;if(fb)fb.hidden=true}else{img.removeAttribute('src');img.hidden=true;if(fb)fb.hidden=false}});const g=$('#commGal');if(g)g.hidden=!$$('img',g).some(x=>!x.hidden)}
+const EXT={book1:'https://static.wixstatic.com/media/097ea4_d4550f86123848fdb1c480edac805df7~mv2.png/v1/fill/w_519,h_519,al_c,q_85/cover.png',book2:'https://static.wixstatic.com/media/097ea4_3666e58ebce147f39d162209f0797e14~mv2.png/v1/fill/w_342,h_519,al_c,q_85/cover.png',book3:'https://static.wixstatic.com/media/8d18ee_617234b8266b4ba5b3a254dcf724f879~mv2.jpg/v1/fill/w_400,h_600,al_c,q_85/cover.jpg'};
+function renderSlots(){$$('[data-slot]').forEach(img=>{const k=img.dataset.slot,s=slotSrc(k)||EXT[k]||(/^(book|comm)/.test(k)?'':scene('villa','dusk',hash(k)));const fb=img.parentElement.querySelector('[data-fb]');if(s){img.referrerPolicy='no-referrer';img.onerror=()=>{img.hidden=true;if(fb)fb.hidden=false};img.src=s;img.hidden=false;if(fb)fb.hidden=true}else{img.removeAttribute('src');img.hidden=true;if(fb)fb.hidden=false}});const g=$('#commGal');if(g)g.hidden=!$$('img',g).some(x=>!x.hidden)}
 function renderImages(){const lg=slotSrc('logo');$('#hlogo').innerHTML=lg?`<img src="${lg}" alt="Falesha Raquel">`:LOGO0;$('#flogo').innerHTML=lg?`<img src="${lg}" alt="Falesha Raquel">`:LOGO0.replace('<b>','<b style="color:#fff">');renderSlots()}
 function renderAll(){renderFilters();renderGrid();renderTiles();renderQuotes();renderPosts();renderAbout();renderCI();renderCountries();renderSlots()}
 
