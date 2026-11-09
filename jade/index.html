@@ -1,0 +1,1023 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jade Barkie | Real estate in Toronto</title>
+<meta name="description" content="Jade Barkie, real estate in Toronto. Free home evaluation, buyer and seller guidance.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#14181d">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14181d;--ink2:#1b2128;--ink3:#252c35;--ivory:#f5f6f8;--paper:#fff;--gold:#E8601C;--gold-d:#C44A0A;--muted:#625e57;--line:#dfe3e8;--line-d:#34343a;--ok:#1f7a4d;--err:#b3261e;--r:4px;--serif:'Archivo',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+[hidden]{display:none!important}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+.wrap{width:min(1240px,100% - 2*clamp(16px,4vw,40px));margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.kicker{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--gold-d)}
+.dark .kicker,.hero .kicker{color:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.4vw,3.4rem)}
+.lead{font-size:1.08rem;color:var(--muted);max-width:60ch}
+.dark .lead{color:#b9b4aa}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem 1.6rem;border:1px solid var(--ink);background:var(--ink);color:#fff;text-decoration:none;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;border-radius:var(--r);transition:.2s}
+.btn:hover{background:var(--gold-d);border-color:var(--gold-d)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#111}
+.btn.gold:hover{background:#d9b878;border-color:#d9b878}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn.ghost:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.dark .btn.ghost:hover{background:#fff;color:#111;border-color:#fff}
+.btn.sm{padding:.55rem 1rem;font-size:.68rem}
+.btn.danger{background:var(--err);border-color:var(--err)}
+/* banner + header */
+.mock{background:var(--gold);color:#111;text-align:center;font-size:.78rem;padding:.5rem 1rem;font-weight:500}
+header.top{position:sticky;top:0;z-index:50;background:rgba(20,24,29,.97);color:#fff;border-bottom:1px solid var(--line-d)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:68px}
+.logo{display:flex;flex-direction:column;text-decoration:none;line-height:1}
+.logo b{font-family:var(--serif);font-weight:500;font-size:1.3rem;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.logo small{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-top:.3rem}
+nav.main{display:flex;align-items:center;gap:clamp(.7rem,1.2vw,1.3rem)}
+nav.main a{font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:#d8d3c8;white-space:nowrap;padding:.4rem 0;border-bottom:1px solid transparent}
+nav.main a:hover{color:#fff;border-color:var(--gold)}
+.bar-r{display:flex;align-items:center;gap:.8rem}.bar-r .btn{white-space:nowrap}
+.lang{background:none;border:1px solid var(--line-d);color:#ddd;padding:.35rem .6rem;font-size:.7rem;letter-spacing:.12em;border-radius:var(--r)}
+.lang:hover{border-color:var(--gold);color:#fff}
+.burger{display:none;background:none;border:1px solid var(--line-d);color:#fff;width:42px;height:38px;border-radius:var(--r);font-size:1.2rem}
+@media(max-width:1180px){
+ .burger{display:block}
+ nav.main{position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-direction:column;align-items:stretch;gap:0;padding:.5rem clamp(16px,4vw,40px) 1.2rem;border-bottom:1px solid var(--line-d);visibility:hidden;opacity:0;transform:translateY(-6px);transition:.2s}
+ nav.main.open{visibility:visible;opacity:1;transform:none}
+ nav.main a{padding:.95rem 0;border-bottom:1px solid var(--line-d);font-size:.8rem}
+ .bar-r .btn{display:none}
+}
+/* hero */
+.hero{position:relative;color:#fff;background:var(--ink);min-height:min(88vh,860px);display:flex;align-items:flex-end;overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,10,.35) 0%,rgba(8,8,10,.15) 35%,rgba(8,8,10,.88) 100%)}
+.hero .wrap{position:relative;z-index:2;padding:clamp(80px,12vw,170px) 0 clamp(28px,4vw,48px);width:min(1240px,100% - 2*clamp(16px,4vw,40px))}
+.hero h1{font-size:clamp(2.8rem,8.5vw,7rem);margin:.7rem 0 .4rem;text-shadow:0 2px 30px rgba(0,0,0,.4)}
+.hero .sub{font-size:clamp(.95rem,1.6vw,1.2rem);max-width:46ch;color:#ece7dc;margin-bottom:2rem}
+.search{background:rgba(255,255,255,.97);color:var(--ink);border-radius:6px;max-width:900px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.tabs{display:flex;border-bottom:1px solid var(--line)}
+.tabs button{flex:1;background:none;border:0;padding:1rem .5rem;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabs button[aria-selected=true]{color:var(--ink);border-color:var(--gold)}
+.tabpanel{padding:1.1rem;display:grid;grid-template-columns:repeat(3,1fr) auto;gap:.8rem;align-items:end}
+.tabpanel.two{grid-template-columns:1fr auto}
+.tabpanel label,.f label{display:flex;flex-direction:column;gap:.3rem;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+input,select,textarea{font:inherit;font-size:.95rem;color:var(--ink);background:#fff;border:1px solid #cfc9bd;border-radius:var(--r);padding:.7rem .8rem;width:100%;letter-spacing:0;text-transform:none;font-weight:400}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold-d)}
+textarea{min-height:110px;resize:vertical}
+@media(max-width:760px){.tabpanel,.tabpanel.two{grid-template-columns:1fr}.tabs button{font-size:.62rem;letter-spacing:.1em}}
+/* credentials */
+.creds{background:var(--ink);color:#e9e4d9;border-top:1px solid var(--line-d)}
+.creds ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-d)}
+.creds li{background:var(--ink);padding:1.4rem 1.2rem;text-align:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
+.creds li b{display:block;font-family:var(--serif);font-weight:500;font-size:1.25rem;letter-spacing:0;text-transform:none;color:var(--gold);margin-bottom:.2rem}
+@media(max-width:820px){.creds ul{grid-template-columns:1fr 1fr}}
+section{padding:clamp(60px,9vw,120px) 0}
+.sec-h{display:flex;justify-content:space-between;align-items:end;gap:1.5rem;flex-wrap:wrap;margin-bottom:clamp(24px,4vw,44px)}
+.sec-h h2{margin-top:.5rem}
+.dark{background:var(--ink);color:#fff}
+.ivory{background:var(--ivory)}
+/* listings */
+.filters{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.chip{background:#fff;border:1px solid #cfc9bd;padding:.55rem 1rem;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border-radius:99px;color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.filters select{width:auto;border-radius:99px;font-size:.78rem;padding:.55rem 1rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,26px)}
+.card{position:relative;background:none;border:0;text-align:left;color:inherit;display:block;width:100%}
+.card .im{position:relative;aspect-ratio:4/3;overflow:hidden;background:#222;border-radius:3px}
+.card .im img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.card:hover .im img{transform:scale(1.06)}
+.card .im:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.55))}
+.card .pill{position:absolute;top:12px;left:12px;z-index:2;background:#fff;color:#111;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:.35rem .6rem;border-radius:2px}
+.card .pill.sold{background:var(--gold)}
+.card .smp{position:absolute;top:12px;right:12px;z-index:2;background:rgba(0,0,0,.6);color:#fff;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .5rem;border-radius:2px}
+.card .price{position:absolute;left:14px;bottom:12px;z-index:2;color:#fff;font-family:var(--serif);font-size:1.6rem}
+.card h3{font-size:1.25rem;margin-top:.9rem}
+.card p{font-size:.85rem;color:var(--muted)}
+.card .meta{display:flex;gap:1rem;font-size:.78rem;color:var(--ink);margin-top:.3rem;letter-spacing:.04em}
+.grid .card:first-child{grid-column:span 2;grid-row:span 2}
+.grid .card:first-child .im{aspect-ratio:auto;height:calc(100% - 5rem);min-height:380px}
+.grid .card:first-child .price{font-size:2.3rem}
+.grid .card:first-child h3{font-size:1.7rem}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.grid .card:first-child{grid-column:span 2;grid-row:auto}.grid .card:first-child .im{height:auto;aspect-ratio:16/10;min-height:0}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.grid .card:first-child{grid-column:auto}}
+.empty{padding:3rem;text-align:center;color:var(--muted);border:1px dashed #cfc9bd}
+/* markets */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tile{position:relative;aspect-ratio:3/4;overflow:hidden;border-radius:3px;display:flex;align-items:flex-end;color:#fff;text-decoration:none}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.tile:hover img{transform:scale(1.06)}
+.tile:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.75))}
+.tile span{position:relative;z-index:2;padding:1.2rem;font-family:var(--serif);font-size:1.5rem;line-height:1.1}
+.tile small{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:.4rem}
+@media(max-width:900px){.tiles{grid-template-columns:1fr 1fr}}
+/* sell */
+.split{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,5vw,72px);align-items:center}
+.split .pic{position:relative;aspect-ratio:4/5;border-radius:3px;overflow:hidden}
+.split .pic img{width:100%;height:100%;object-fit:cover}
+@media(max-width:900px){.split{grid-template-columns:1fr}.split .pic{aspect-ratio:16/11}}
+.f{display:grid;gap:.9rem;margin-top:1.4rem}
+.f .row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+@media(max-width:560px){.f .row{grid-template-columns:1fr}}
+.dark .f label{color:#b9b4aa}
+.chk{display:flex!important;flex-direction:row!important;gap:.6rem!important;align-items:flex-start;text-transform:none!important;letter-spacing:0!important;font-size:.8rem!important;font-weight:400!important;line-height:1.45}
+.chk input{width:auto;margin-top:.2rem;accent-color:var(--gold-d)}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+.note{font-size:.78rem;color:var(--muted)}
+.dark .note{color:#b9b4aa}
+.msg{padding:.8rem 1rem;border-radius:var(--r);font-size:.9rem;margin-top:.4rem}
+.msg.ok{background:#e4f3ea;color:#145a37;border:1px solid #b8dfc8}
+.msg.err{background:#fbe9e7;color:#8a1c15;border:1px solid #efc4bf}
+/* about */
+.about .portrait{position:relative;aspect-ratio:4/5;border-radius:3px;overflow:hidden;background:linear-gradient(160deg,#1d1d21,#0c0c0d);display:flex;align-items:center;justify-content:center}
+.about .portrait img{width:100%;height:100%;object-fit:cover}
+.mono{font-family:var(--serif);font-size:7rem;color:var(--gold);letter-spacing:.05em}
+.team{display:grid;grid-template-columns:minmax(0,230px);gap:14px;margin-top:2rem}
+.member{background:var(--ink2);border:1px solid var(--line-d);border-radius:3px;overflow:hidden}
+.member .ph{aspect-ratio:4/4.2;background:radial-gradient(circle at 50% 30%,#fff,#e9e4d9);display:flex;align-items:flex-end;justify-content:center}
+.member .ph img{height:100%;width:auto;object-fit:contain}
+.member .ph.empty{background:linear-gradient(160deg,#26262b,#111);align-items:center;color:var(--gold);font-family:var(--serif);font-size:3rem}
+.member div.t{padding:.9rem 1rem}
+.member b{font-family:var(--serif);font-weight:500;font-size:1.15rem;display:block}
+.member small{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+/* empire */
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.cols3{grid-template-columns:1fr}}
+.pc{background:var(--ink2);border:1px solid var(--line-d);padding:1.8rem;border-radius:3px;display:flex;flex-direction:column;gap:.8rem;min-height:260px}
+.pc h3{font-size:1.5rem}
+.pc p{color:#b9b4aa;font-size:.92rem;flex:1}
+.pc .n{font-family:var(--serif);color:var(--gold);font-size:2.4rem;line-height:1}
+.band{position:relative;min-height:420px;display:flex;align-items:center;color:#fff;overflow:hidden}
+.band>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.band:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,10,.85),rgba(8,8,10,.25))}
+.band .wrap{position:relative;z-index:2}
+.band h2{max-width:22ch;margin:.6rem 0 1.4rem}.band .kicker{color:var(--gold)}
+/* testimonials, blog */
+.quote{background:#fff;border:1px solid var(--line);padding:1.8rem;border-radius:3px;display:flex;flex-direction:column;gap:1rem}
+.quote q{font-family:var(--serif);font-size:1.25rem;line-height:1.35;quotes:"“" "”"}
+.quote cite{font-style:normal;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.quote .smp2{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-d);font-weight:700}
+.post{background:none;border:0;text-align:left;color:inherit;display:block}
+.post{align-self:start;width:100%}.split .pic.wide{aspect-ratio:16/11}.about .portrait .mono{position:absolute;z-index:2;text-shadow:0 4px 30px #000}.about .portrait:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,10,.25),rgba(8,8,10,.75))}
+.post .im{aspect-ratio:16/10;overflow:hidden;border-radius:3px;margin-bottom:.9rem;background:#222}
+.post .im img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.post:hover .im img{transform:scale(1.05)}
+.post small{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d);font-weight:600}
+.post h3{font-size:1.3rem;margin:.3rem 0}
+.post p{font-size:.88rem;color:var(--muted)}
+/* contact + footer */
+.ci{list-style:none;display:grid;gap:.9rem;margin:1.6rem 0}
+.ci a{text-decoration:none;border-bottom:1px solid var(--gold)}
+.ci small{display:block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+footer{background:#070708;color:#a9a499;padding:56px 0 100px;font-size:.82rem}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem}
+@media(max-width:820px){.fg{grid-template-columns:1fr 1fr}}
+footer h4{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;font-weight:600}
+footer ul{list-style:none;display:grid;gap:.4rem}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+footer .legal{border-top:1px solid #232327;margin-top:2rem;padding-top:1.4rem;line-height:1.7}
+.linkbtn{background:none;border:0;color:inherit;padding:0;text-decoration:underline}
+/* modal */
+dialog{border:0;border-radius:6px;max-width:min(1000px,94vw);width:100%;max-height:92vh;padding:0;background:#fff;color:var(--ink);box-shadow:0 40px 120px rgba(0,0,0,.5);margin:auto;overflow:auto}
+dialog::backdrop{background:rgba(5,5,7,.78)}
+.dx{position:sticky;top:0;float:right;z-index:5;margin:10px;background:#fff;border:1px solid var(--line);width:38px;height:38px;border-radius:50%;font-size:1.1rem}
+.pd{display:grid;grid-template-columns:1.4fr 1fr}
+.pd .gal{background:#111}
+.pd .gal .main{aspect-ratio:4/3;position:relative}
+.pd .gal .main img{width:100%;height:100%;object-fit:cover}
+.pd .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:4px}
+.pd .thumbs button{border:2px solid transparent;padding:0;background:none;aspect-ratio:4/3;overflow:hidden}
+.pd .thumbs button[aria-current=true]{border-color:var(--gold)}
+.pd .thumbs img{width:100%;height:100%;object-fit:cover}
+.pd .info{padding:1.6rem 1.6rem 2rem}
+.pd .info h3{font-size:1.9rem;margin:.4rem 0}
+.pd .pr{font-family:var(--serif);font-size:1.8rem;color:var(--gold-d)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin:1rem 0;border-block:1px solid var(--line);padding:.9rem 0;text-align:center}
+.facts b{display:block;font-family:var(--serif);font-size:1.3rem;font-weight:500}
+.facts small{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:820px){.pd{grid-template-columns:1fr}}
+.pad{padding:1.8rem}
+.pad h3{font-size:1.8rem;margin-bottom:.8rem}
+.pad p,.pad li{font-size:.92rem;margin-bottom:.7rem;color:#3a3833}
+.pad ul{padding-left:1.1rem}
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;background:var(--ink);border-top:1px solid var(--line-d);padding:.6rem;gap:.6rem}
+.mbar a{flex:1;text-align:center;padding:.75rem;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;font-weight:600;color:#fff;border:1px solid var(--line-d);border-radius:var(--r)}
+.mbar a.g{background:var(--gold);color:#111;border-color:var(--gold)}
+@media(max-width:760px){.mbar{display:flex}}
+/* ADMIN */
+#admin{position:fixed;inset:0;z-index:100;background:#f1efe9;color:var(--ink);overflow:auto;display:none}
+#admin.on{display:block}
+.ad-top{background:var(--ink);color:#fff;display:flex;align-items:center;gap:1rem;padding:.7rem clamp(12px,3vw,28px);position:sticky;top:0;z-index:5;flex-wrap:wrap}
+.ad-top b{font-family:var(--serif);font-weight:500;letter-spacing:.1em;text-transform:uppercase;margin-right:auto}
+.ad-nav{display:flex;gap:.3rem;flex-wrap:wrap;background:#fff;border-bottom:1px solid var(--line);padding:.5rem clamp(12px,3vw,28px)}
+.ad-nav button{background:none;border:0;padding:.6rem .9rem;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--muted);border-bottom:2px solid transparent}
+.ad-nav button[aria-selected=true]{color:var(--ink);border-color:var(--gold)}
+.ad-main{padding:clamp(14px,3vw,28px);max-width:1300px;margin:auto}
+.ad-warn{background:#fff7e0;border:1px solid #ecd58f;padding:.8rem 1rem;border-radius:var(--r);font-size:.82rem;margin-bottom:1.2rem;color:#4a3a05}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:1.4rem}
+@media(max-width:820px){.kpis{grid-template-columns:1fr 1fr}}
+.kpi{background:#fff;border:1px solid var(--line);padding:1rem 1.1rem;border-radius:var(--r)}
+.kpi b{display:block;font-family:var(--serif);font-size:2rem;font-weight:500}
+.kpi small{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.1rem;margin-bottom:1.2rem}
+.panel h3{font-size:1.25rem;margin-bottom:.8rem}
+.tbar{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:.9rem;align-items:center}
+.tbar input,.tbar select{width:auto;min-width:150px;padding:.5rem .7rem;font-size:.85rem}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+th,td{text-align:left;padding:.65rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;white-space:nowrap}
+tr.click{cursor:pointer}tr.click:hover{background:#faf8f3}
+.st{display:inline-block;padding:.15rem .5rem;border-radius:99px;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:#eee;color:#333}
+.st.new{background:#dbeafe;color:#17407a}.st.contacted{background:#fef3c7;color:#7a4a00}.st.qualified{background:#e0e7ff;color:#3730a3}.st.meeting{background:#fce7f3;color:#8a1b55}.st.won{background:#dcfce7;color:#14532d}.st.lost{background:#f1f1f1;color:#666}
+.bars{display:grid;gap:.5rem}
+.bars div{display:grid;grid-template-columns:110px 1fr 34px;gap:.6rem;align-items:center;font-size:.8rem}
+.bars i{display:block;height:10px;background:var(--gold);border-radius:99px}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(520px,100%);background:#fff;border-left:1px solid var(--line);z-index:120;overflow:auto;padding:1.2rem;box-shadow:-20px 0 60px rgba(0,0,0,.2)}
+.drawer h3{font-size:1.5rem;margin-bottom:.2rem}
+.tl{list-style:none;display:grid;gap:.6rem;margin-top:.6rem}
+.tl li{border-left:2px solid var(--gold);padding-left:.7rem;font-size:.82rem}
+.tl small{color:var(--muted);display:block}
+.ed{display:grid;gap:.8rem}
+.ed .row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.ed label{display:flex;flex-direction:column;gap:.25rem;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.thumbs-ed{display:flex;gap:.5rem;flex-wrap:wrap}
+.thumbs-ed div{position:relative;width:96px;height:72px;border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.thumbs-ed img{width:100%;height:100%;object-fit:cover}
+.thumbs-ed button{position:absolute;top:2px;right:2px;background:#000c;color:#fff;border:0;border-radius:50%;width:20px;height:20px;font-size:.7rem}
+.login{max-width:420px;margin:8vh auto;background:#fff;border:1px solid var(--line);padding:2rem;border-radius:6px}
+.login h3{font-size:1.8rem;margin-bottom:.4rem}
+@media print{.mock,header,.mbar,footer{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.logo img{height:42px;width:auto;max-width:240px;object-fit:contain}
+
+/* ===== multi-page additions ===== */
+nav.main ul.mn{display:flex;align-items:center;gap:clamp(.7rem,1.2vw,1.3rem);list-style:none;margin:0;padding:0}
+nav.main li{position:relative}
+nav.main li.sub>a:after{content:"▾";font-size:.6rem;margin-left:.35rem;opacity:.7}
+nav.main li>ul{position:absolute;top:100%;left:-.9rem;min-width:220px;background:var(--ink);border:1px solid var(--line-d);border-top:2px solid var(--gold);padding:.4rem 0;list-style:none;margin:0;visibility:hidden;opacity:0;transform:translateY(6px);transition:.18s;z-index:60}
+nav.main li:hover>ul,nav.main li:focus-within>ul{visibility:visible;opacity:1;transform:none}
+nav.main li>ul a{display:block;padding:.65rem 1.1rem;border:0;white-space:nowrap}
+nav.main li>ul a:hover{background:rgba(255,255,255,.06)}
+nav.main a.cur{color:#fff;border-color:var(--gold)}
+@media(max-width:1180px){
+ nav.main ul.mn{flex-direction:column;align-items:stretch;gap:0;width:100%}
+ nav.main li>ul{position:static;visibility:visible;opacity:1;transform:none;border:0;background:none;padding:0 0 .4rem 1rem;min-width:0}
+ nav.main li>ul a{padding:.6rem 0;font-size:.74rem;color:#b9b4aa}
+ nav.main li.sub>a:after{display:none}
+ nav.main{max-height:calc(100vh - 70px);overflow:auto}
+}
+.ph{position:relative;color:#fff;background:var(--ink);min-height:clamp(300px,42vh,440px);display:flex;align-items:flex-end;overflow:hidden}
+.ph>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,10,.3),rgba(8,8,10,.85))}
+.ph .wrap{position:relative;z-index:2;padding:clamp(70px,10vw,130px) 0 clamp(26px,4vw,44px);width:min(1240px,100% - 2*clamp(16px,4vw,40px))}
+.ph h1{font-size:clamp(2rem,5.4vw,4rem);margin:.6rem 0 .4rem;max-width:20ch}
+.ph .kicker{color:var(--gold)}.ph .lead{color:#e7e2d7}
+.lcard{background:#fff;border:1px solid var(--line);border-radius:4px;padding:1.6rem;display:flex;flex-direction:column;gap:.7rem;align-items:flex-start;text-decoration:none;color:inherit;transition:.2s}
+.lcard h3{font-size:1.35rem;line-height:1.2}.lcard p{font-size:.92rem;color:var(--muted)}
+a.lcard:hover{border-color:var(--gold);transform:translateY(-3px)}
+.dark .lcard{background:#161618;border-color:var(--line-d)}
+.split .pic.logo-panel{background:#000;display:grid;place-items:center}
+.split .pic.logo-panel img{width:70%;height:auto;object-fit:contain}
+.vids{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:1000px){.vids{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.vids{grid-template-columns:1fr}}
+.vid{display:flex;flex-direction:column;gap:.9rem;justify-content:flex-end;min-height:190px;padding:1.2rem;border:1px solid var(--line-d);border-radius:4px;background:linear-gradient(160deg,#1d1c1a,#0c0c0d);color:#fff;text-decoration:none}
+.vid:hover{border-color:var(--gold)}.vid b{font-family:var(--serif);font-weight:500;font-size:1.1rem;line-height:1.25}
+.play{width:42px;height:42px;border-radius:50%;background:var(--gold);position:relative;margin-bottom:auto}
+.play:after{content:"";position:absolute;left:16px;top:12px;border-left:14px solid #111;border-top:9px solid transparent;border-bottom:9px solid transparent}
+.countries{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}
+.countries li{display:flex;justify-content:space-between;gap:.6rem;padding:.8rem 1rem;background:#fff;border:1px solid var(--line);border-radius:3px;font-size:.92rem}
+.countries li small{color:var(--gold-d);font-weight:600}
+.countries.dk li{background:#161618;border-color:var(--line-d);color:#fff}.countries.dk li small{color:var(--gold)}
+.ticks{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.ticks li{padding:.8rem 1rem .8rem 2.3rem;background:#fff;border:1px solid var(--line);border-radius:3px;position:relative}
+.ticks li:before{content:"✓";position:absolute;left:.9rem;color:var(--gold-d);font-weight:700}
+.steps4{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:900px){.steps4{grid-template-columns:1fr 1fr}}@media(max-width:560px){.steps4{grid-template-columns:1fr}}
+.steps4 li{counter-increment:s;padding:1.4rem;border:1px solid var(--line);border-radius:4px;display:flex;flex-direction:column;gap:.5rem}
+.steps4 li:before{content:"0" counter(s);font-family:var(--serif);font-size:2rem;color:var(--gold-d)}
+.steps4 span{font-size:.9rem;color:var(--muted)}
+details.faq{background:#fff;border:1px solid var(--line);border-radius:4px;margin-bottom:10px;padding:0 1.2rem}
+details.faq summary{cursor:pointer;padding:1.1rem 0;font-weight:600;list-style:none}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary:after{content:"+";float:right;color:var(--gold-d);font-size:1.3rem;line-height:1}
+details.faq[open] summary:after{content:"–"}
+details.faq p{padding:0 0 1rem;color:var(--muted);font-size:.94rem}details.faq p+p{margin-top:-.3rem}
+.preorder{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;background:var(--ink);color:#fff;padding:1.6rem 2rem;border-radius:4px;margin-bottom:2rem}
+.books{display:grid;gap:1.6rem}
+.bk{display:grid;grid-template-columns:200px 1fr;gap:1.6rem;align-items:center;padding:1.4rem;border:1px solid var(--line);border-radius:4px;background:#fff}
+@media(max-width:600px){.bk{grid-template-columns:1fr}}
+.bk h3{font-size:1.6rem;margin-bottom:.5rem}.bk p{color:var(--muted);margin-bottom:.9rem}
+.cv img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:3px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.cover{aspect-ratio:2/3;border-radius:3px;display:flex;align-items:flex-end;padding:1.1rem;background:linear-gradient(160deg,#1b1a18,#3a2f18);color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.2);border-left:6px solid var(--gold)}
+.cover span{font-family:var(--serif);font-size:1.35rem;line-height:1.15}
+.cover.alt{background:linear-gradient(160deg,#c9a45c,#7d5f26)}.cover.alt2{background:linear-gradient(160deg,#5b1f2a,#1b0c10)}
+.comm{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:2rem}
+.comm img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
+.quote cite{display:block}
+[data-page][hidden]{display:none!important}
+@media(max-width:1180px){
+ nav.main ul.mn>li>a{display:block;padding:.95rem 0;border-bottom:1px solid var(--line-d)}
+ nav.main li>ul a{border:0}
+}
+
+.cv img{object-fit:contain;background:#f4f1ea}
+
+.preorder{display:grid;grid-template-columns:1.1fr 1fr;gap:2rem;align-items:center;padding:0;overflow:hidden}
+.preorder>div:last-child{padding:1.6rem 2rem}
+.pre-img img{width:100%;display:block}
+@media(max-width:800px){.preorder{grid-template-columns:1fr}}
+.totop{position:fixed;right:18px;bottom:22px;width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);background:var(--ink);color:var(--gold);font-size:1.3rem;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;z-index:70}
+.totop.on{opacity:1;visibility:visible;transform:none}.totop:hover{background:var(--gold);color:#111}
+.ckbar{position:fixed;left:16px;right:16px;bottom:16px;max-width:760px;margin:auto;background:var(--ink);color:#e7e2d7;border:1px solid var(--gold);border-radius:6px;padding:1rem 1.2rem;display:flex;gap:1rem;align-items:center;justify-content:space-between;flex-wrap:wrap;z-index:90;box-shadow:0 12px 40px rgba(0,0,0,.4);font-size:.85rem}
+.ckbar[hidden]{display:none}.ckbar p{flex:1 1 320px}.ckbar .linkbtn{color:var(--gold);text-decoration:underline;background:none;border:0;cursor:pointer;font:inherit}
+.ckb{display:flex;gap:.6rem}
+@media(max-width:700px){.totop{bottom:76px}.ckbar{bottom:70px}}
+
+/* jade overrides */
+h1,h2,h3{font-weight:600;letter-spacing:-.02em}
+.btn.gold{color:#fff}.btn.gold:hover{background:#C44A0A;border-color:#C44A0A}
+.btn:hover{background:var(--gold-d);border-color:var(--gold-d)}
+.ph.plain{min-height:220px}.ph.plain:after{background:none}.ph.plain{background:var(--ink2)}
+.boxf{background:var(--ivory);padding:1.6rem;border-radius:4px}.boxf .bt{display:block;font-size:1.3rem;font-weight:600;margin-bottom:.8rem}
+.dark .split .f{background:var(--ink2);padding:1.6rem;border-radius:4px}
+.legal-t{max-width:820px}.legal-t h2{font-size:1.3rem;margin:1.6rem 0 .5rem}.legal-t p{color:var(--muted);margin-bottom:.8rem}
+.ckl{background:var(--ivory);padding:2rem;border-radius:4px;max-width:820px;margin:2rem auto 0}.ckl ol{margin:1rem 0 1rem 1.2rem}.ckl li{margin:.5rem 0}
+.mcres{background:var(--ink);color:#fff;padding:2rem;border-radius:4px}.mcres small{color:#c9d0d8;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem}.mcres b{display:block;font-size:clamp(2.2rem,5vw,3.4rem);color:var(--gold);margin:.3rem 0 1rem}
+.mcres dl{display:grid;grid-template-columns:1fr auto;gap:.4rem 1rem;border-top:1px solid var(--line-d);padding-top:1rem}.mcres dd{text-align:right;font-weight:600}.mcres .note{color:#b9c1c9;margin-top:.8rem}
+.soc{display:flex;gap:1rem;margin-top:1rem}.soc a{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+.ticks.dk li{background:var(--ink2);border-color:var(--line-d);color:#fff}
+dialog#lmdlg{border:0;border-radius:6px;padding:0;max-width:92vw}dialog#lmdlg::backdrop{background:rgba(0,0,0,.6)}
+.ci{list-style:none}.ci li{display:flex;flex-direction:column;padding:.8rem 0;border-bottom:1px solid var(--line)}.ci small{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+</style>
+</head>
+<body>
+<div class="mock" id="mock">Design preview prepared for Jade Barkie. Sample listings and illustrations. Not an official website.</div>
+<header class="top"><div class="wrap bar">
+ <a class="logo" id="hlogo" href="#/" aria-label="Jade Barkie"><b>Jade Barkie</b><small>Real estate · Toronto</small></a>
+ <nav class="main" id="nav" aria-label="Main"><ul class="mn">
+ <li><a href="#/">Home</a></li>
+ <li><a href="#/about">About</a></li>
+ <li class="sub"><a href="#listings">Properties</a><ul><li><a href="#listings" data-f="sale">Homes for sale</a></li><li><a href="#listings" data-f="sold">Recently sold</a></li><li><a href="#/neighbourhoods">Neighbourhoods</a></li></ul></li>
+ <li class="sub"><a href="#/buy">Buyers</a><ul><li><a href="#/buy">Request properties</a></li><li><a href="#/buyers-guide">Buyer's checklist</a></li><li><a href="#/calculator">Mortgage calculator</a></li></ul></li>
+ <li class="sub"><a href="#/sell">Sellers</a><ul><li><a href="#/sell">Free home evaluation</a></li><li><a href="#/market-report">Market report</a></li></ul></li>
+ <li><a href="#/blog">Blog</a></li>
+ <li><a href="#/faq">FAQ</a></li>
+</ul></nav>
+ <div class="bar-r"><a class="btn gold sm" href="#/sell">Free home value</a><button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false">☰</button></div>
+</div></header>
+<main id="top">
+<div data-page="home">
+<section class="hero" style="padding:0">
+ <img data-slot="hero" alt="" width="1600" height="900">
+ <div class="wrap">
+  <span class="kicker">Real estate in Toronto</span>
+  <h1>Jade Barkie</h1>
+  <p class="sub">Clear numbers, straight answers and a plan for every step, whether you are buying, selling or investing.</p>
+  <div class="search">
+   <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-tab="buy">Buy</button>
+    <button role="tab" aria-selected="false" data-tab="sell">Sell</button>
+    <button role="tab" aria-selected="false" data-tab="invest">Invest</button>
+   </div>
+   <form class="tabpanel" id="p-buy">
+    <label><span>Area</span><select id="q-market"></select></label>
+    <label><span>Type</span><select id="q-type"></select></label>
+    <label><span>Max budget</span><select id="q-budget"></select></label>
+    <button class="btn" type="submit">Search homes</button>
+   </form>
+   <form class="tabpanel two" id="p-sell" hidden>
+    <label><span>Property address</span><input id="q-addr" autocomplete="street-address" placeholder="Street, city"></label>
+    <button class="btn" type="submit">Get my free estimate</button>
+   </form>
+   <form class="tabpanel two" id="p-invest" hidden>
+    <p class="note" style="align-self:center">Looking for an income property or a second home? Let's talk numbers.</p>
+    <button class="btn" type="submit">Start the conversation</button>
+   </form>
+  </div>
+ </div>
+</section>
+<div class="creds"><div class="wrap"><ul>
+ <li><b>Toronto</b><span>and the GTA</span></li>
+ <li><b>eXp Realty</b><span>Brokerage</span></li>
+ <li><b>Free</b><span>home value estimate</span></li>
+ <li><b>No pressure</b><span>no obligation</span></li>
+</ul></div></div>
+<section id="listings" class="ivory"><div class="wrap">
+ <div class="sec-h"><div><span class="kicker">Featured properties</span><h2>Homes worth the visit</h2></div><a class="btn ghost" href="#/buy">Request off-market properties</a></div>
+ <div class="filters" id="filters">
+  <button class="chip" data-f="all" aria-pressed="true">All</button><button class="chip" data-f="sale" aria-pressed="false">For sale</button><button class="chip" data-f="sold" aria-pressed="false">Recently sold</button>
+  <select id="f-market" aria-label="Area"></select><select id="f-type" aria-label="Type"></select>
+ </div>
+ <div class="grid" id="grid"></div>
+ <p class="note" style="margin-top:1rem">Sample listings with illustrative images. Replace them with real listings and photos in the admin area.</p>
+</div></section>
+<section class="dark" id="valuation"><div class="wrap split">
+ <div>
+  <span class="kicker">Complimentary home evaluation</span>
+  <h2>What is your home worth today?</h2>
+  <p class="lead" style="margin-top:1rem">Get a free, no-obligation estimate based on recent comparable sales in your neighbourhood. It is an informal opinion of value, not an appraisal.</p>
+  <ul class="ticks dk" style="margin-top:1.2rem"><li>Based on recent local sales</li><li>Reviewed by Jade personally</li><li>Free, no obligation</li></ul>
+ </div>
+ <form class="f lead-form" data-type="estimate" data-source="Home page: valuation">
+ <label>Property address<input name="address" required autocomplete="street-address"></label><label>Name<input name="name" required autocomplete="name"></label><label>Email<input name="email" type="email" required autocomplete="email"></label><label>Phone (optional)<input name="phone" type="tel" autocomplete="tel"></label>
+ <div class="hp"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+ <label class="chk"><input type="checkbox" name="consent" required><span>I agree that Jade Barkie may contact me about my request by phone, text message or email. I can withdraw my consent at any time.</span></label>
+ <div class="fmsg" role="status"></div><button class="btn" type="submit">Get my free estimate</button>
+</form>
+</div></section>
+<section><div class="wrap">
+ <div class="sec-h"><div><span class="kicker">Neighbourhoods</span><h2>Explore Toronto</h2></div><a class="btn ghost" href="#/neighbourhoods">All neighbourhoods</a></div>
+ <div class="tiles" id="tiles"></div>
+</div></section>
+<section class="ivory"><div class="wrap">
+ <div class="sec-h"><div><span class="kicker">Free resources</span><h2>Tools to make smarter moves</h2></div></div>
+ <div class="cols3">
+  <a class="lcard" href="#/buyers-guide"><span class="kicker">Buyer's guide</span><h3>Toronto home buyer checklist</h3><p>From pre-approval to closing day, what to do and in what order.</p><span class="btn sm">Get the checklist</span></a>
+  <a class="lcard" href="#/market-report"><span class="kicker">Market report</span><h3>Toronto market report by email</h3><p>Get the market update sent to your inbox.</p><span class="btn sm">Subscribe</span></a>
+  <a class="lcard" href="#/calculator"><span class="kicker">Calculator</span><h3>Mortgage payment calculator</h3><p>Estimate your payment using Canadian rules.</p><span class="btn sm">Try it</span></a>
+ </div>
+</div></section>
+<section id="about"><div class="wrap split">
+ <div class="pic about"><div class="portrait" id="portrait"></div></div>
+ <div>
+  <span class="kicker">About</span><h2>Your real estate partner in Toronto</h2>
+  <p class="lead" style="margin-top:1rem" id="bio"></p>
+  <p style="margin-top:1.4rem;display:flex;gap:.7rem;flex-wrap:wrap"><a class="btn" href="#/about">Learn more</a><a class="btn ghost" href="#/contact">Get in touch</a></p>
+ </div>
+</div></section>
+<section class="ivory" id="blogs"><div class="wrap">
+ <div class="sec-h"><div><span class="kicker">Blog</span><h2>Stories and insights</h2></div><a class="btn ghost" href="#/blog">All articles</a></div>
+ <div class="cols3" id="posts"></div>
+</div></section>
+<section id="testimonials"><div class="wrap">
+ <div class="sec-h"><div><span class="kicker">Testimonials</span><h2>Kind words from clients</h2></div></div>
+ <div class="cols3" id="quotes"></div>
+</div></section>
+<section class="dark"><div class="wrap split">
+ <div><span class="kicker">Newsletter</span><h2>Stay in the loop</h2><p class="lead" style="margin-top:1rem">New listings, market updates and practical tips, no spam. Unsubscribe at any time.</p></div>
+ <form class="f lead-form" data-type="newsletter" data-source="Newsletter">
+ <label>Name<input name="name" autocomplete="name"></label><label>Email<input name="email" type="email" required autocomplete="email"></label>
+ <div class="hp"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+ <label class="chk"><input type="checkbox" name="consent" required><span>I agree that Jade Barkie may contact me about my request by phone, text message or email. I can withdraw my consent at any time.</span></label>
+ <div class="fmsg" role="status"></div><button class="btn" type="submit">Subscribe</button>
+</form>
+</div></section>
+</div>
+<div data-page="about" hidden>
+<header class="ph"><img data-slot="about" alt=""><div class="wrap"><span class="kicker">About</span><h1>Jade Barkie</h1><p class="lead">Real estate in Toronto.</p></div></header>
+<section><div class="wrap split">
+ <div class="pic about"><div class="portrait" id="portrait2"></div></div>
+ <div>
+  <h2>Confident decisions, calm process</h2>
+  <p class="lead" style="margin-top:1rem">Jade Barkie helps buyers, sellers and investors make confident decisions in the Toronto market, with straight answers, clear numbers and a plan for every step.</p>
+  <p class="lead" style="margin-top:.8rem">Ask a question, request an estimate or simply start a conversation. There is no pressure and no obligation.</p>
+  <p class="note" style="margin-top:1rem">Add Jade's own biography, credentials, languages and areas served in Admin › Settings.</p>
+  <p style="margin-top:1.4rem;display:flex;gap:.7rem;flex-wrap:wrap"><a class="btn" href="#/contact">Work with Jade</a><a class="btn ghost" href="#/sell">Free home evaluation</a></p>
+ </div>
+</div></section>
+<section class="ivory"><div class="wrap"><div class="cols3">
+ <div class="lcard"><h3>Listen first</h3><p>Your goals, timeline and budget shape every recommendation.</p></div>
+ <div class="lcard"><h3>Numbers you can trust</h3><p>Pricing and offers backed by recent comparable sales, not guesses.</p></div>
+ <div class="lcard"><h3>Support to the end</h3><p>From first conversation to the keys, with a plan at every step.</p></div>
+</div></div></section>
+</div>
+<div data-page="buy" hidden>
+<header class="ph"><img data-slot="buy" alt=""><div class="wrap"><span class="kicker">Buyers</span><h1>Find the right home with confidence</h1><p class="lead">First-time buyers, move-up buyers and investors.</p></div></header>
+<section><div class="wrap split">
+ <div>
+  <h2>Access to properties before they are widely advertised</h2>
+  <p class="lead" style="margin-top:1rem">Tell Jade what you are looking for. You will receive matching listings, honest advice on pricing and a clear plan from pre-approval to closing.</p>
+  <ul class="ticks" style="margin-top:1.2rem"><li>Search by area, type and budget</li><li>Help with offers and negotiation</li><li>Guidance on inspections and closing costs</li></ul>
+  <p style="margin-top:1.4rem;display:flex;gap:.7rem;flex-wrap:wrap"><a class="btn ghost" href="#/buyers-guide">Buyer's checklist</a><a class="btn ghost" href="#/calculator">Mortgage calculator</a></p>
+ </div>
+ <div class="boxf"><b class="bt">Request properties</b><form class="f lead-form" data-type="buyer" data-source="Buy page">
+ <div class="row"><label>Name<input name="name" required autocomplete="name"></label><label>Email<input name="email" type="email" required autocomplete="email"></label></div><div class="row"><label>Phone (optional)<input name="phone" type="tel" autocomplete="tel"></label><label>Budget<select name="subject"><option>Under 750K</option><option>750K to 1M</option><option>1M to 2M</option><option>Over 2M</option></select></label></div><label>Areas and type of home<textarea name="message" style="min-height:80px"></textarea></label>
+ <div class="hp"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+ <label class="chk"><input type="checkbox" name="consent" required><span>I agree that Jade Barkie may contact me about my request by phone, text message or email. I can withdraw my consent at any time.</span></label>
+ <div class="fmsg" role="status"></div><button class="btn" type="submit">Send my request</button>
+</form></div>
+</div></section>
+</div>
+<div data-page="sell" hidden>
+<header class="ph"><img data-slot="sell" alt=""><div class="wrap"><span class="kicker">Sellers</span><h1>What is your home worth?</h1><p class="lead">Free, no-obligation home evaluation.</p></div></header>
+<section><div class="wrap split">
+ <div>
+  <h2>Sell with a plan and the right price</h2>
+  <p class="lead" style="margin-top:1rem">Pricing, preparation, marketing and negotiation: Jade guides each step so you can sell with confidence. Start with a free estimate based on recent comparable sales.</p>
+  <ul class="ticks" style="margin-top:1.2rem"><li>Pricing strategy</li><li>Preparing the home</li><li>Photos and marketing</li><li>Offers and negotiation</li></ul>
+  <p class="note" style="margin-top:1rem">An estimate is an informal opinion of value, not an appraisal.</p>
+ </div>
+ <div class="boxf"><b class="bt">Request a free home evaluation</b><form class="f lead-form" data-type="estimate" data-source="Sell page">
+ <label>Property address<input name="address" required autocomplete="street-address"></label><div class="row"><label>Name<input name="name" required autocomplete="name"></label><label>Email<input name="email" type="email" required autocomplete="email"></label></div><div class="row"><label>Phone (optional)<input name="phone" type="tel" autocomplete="tel"></label><label>When do you plan to sell?<select name="timeline"><option>0–3 months</option><option>3–6 months</option><option>6–12 months</option><option>Just curious</option></select></label></div>
+ <div class="hp"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+ <label class="chk"><input type="checkbox" name="consent" required><span>I agree that Jade Barkie may contact me about my request by phone, text message or email. I can withdraw my consent at any time.</span></label>
+ <div class="fmsg" role="status"></div><button class="btn" type="submit">Get my free estimate</button>
+</form></div>
+</div></section>
+</div>
+<div data-page="neighbourhoods" hidden>
+<header class="ph"><img data-slot="nb" alt=""><div class="wrap"><span class="kicker">Neighbourhoods</span><h1>Explore Toronto neighbourhoods</h1><p class="lead">Find the area that fits your life.</p></div></header>
+<section><div class="wrap"><div class="cols3"><div class="lcard"><span class="kicker">Toronto</span><h3>Yorkville</h3><p>Boutiques, restaurants and condo living in the heart of downtown.</p><a class="btn sm" href="#/contact" data-subject="Buying">Ask about Yorkville</a></div><div class="lcard"><span class="kicker">Toronto</span><h3>The Annex</h3><p>Tree-lined streets, Victorian homes and a lively neighbourhood near the university.</p><a class="btn sm" href="#/contact" data-subject="Buying">Ask about The Annex</a></div><div class="lcard"><span class="kicker">Toronto</span><h3>Forest Hill</h3><p>Larger homes and mature streets in one of Toronto's well-known residential areas.</p><a class="btn sm" href="#/contact" data-subject="Buying">Ask about Forest Hill</a></div><div class="lcard"><span class="kicker">Toronto</span><h3>Leslieville</h3><p>East-end streets of semis and cafés, popular with young families.</p><a class="btn sm" href="#/contact" data-subject="Buying">Ask about Leslieville</a></div><div class="lcard"><span class="kicker">Toronto</span><h3>Liberty Village</h3><p>Lofts and condos near the lake, close to downtown.</p><a class="btn sm" href="#/contact" data-subject="Buying">Ask about Liberty Village</a></div><div class="lcard"><span class="kicker">Toronto</span><h3>North York</h3><p>Along the Yonge corridor, a mix of condos, family homes and transit access.</p><a class="btn sm" href="#/contact" data-subject="Buying">Ask about North York</a></div></div>
+<p class="note" style="margin-top:1.2rem">General descriptions only. Ask Jade for current prices, schools and sales in any area.</p></div></section>
+</div>
+<div data-page="buyers-guide" hidden>
+<header class="ph"><img data-slot="buy" alt=""><div class="wrap"><span class="kicker">Free guide</span><h1>Toronto home buyer checklist</h1><p class="lead">Ten steps from pre-approval to closing day.</p></div></header>
+<section><div class="wrap split">
+ <div id="gLock">
+  <h2>Get the free checklist</h2>
+  <p class="lead" style="margin-top:1rem">Enter your details to unlock the checklist instantly. Jade may follow up to see if you have questions.</p>
+ </div>
+ <div class="boxf" id="gForm"><form class="f lead-form" data-type="guide" data-source="Buyer guide" data-unlock="guide">
+ <div class="row"><label>Name<input name="name" required autocomplete="name"></label><label>Email<input name="email" type="email" required autocomplete="email"></label></div><label>Phone (optional)<input name="phone" type="tel" autocomplete="tel"></label>
+ <div class="hp"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+ <label class="chk"><input type="checkbox" name="consent" required><span>I agree that Jade Barkie may contact me about my request by phone, text message or email. I can withdraw my consent at any time.</span></label>
+ <div class="fmsg" role="status"></div><button class="btn" type="submit">Unlock the checklist</button>
+</form></div>
+</div>
+<div class="wrap" id="gOpen" hidden><div class="ckl"><h2>Your 10-step checklist</h2><ol><li>Get a mortgage pre-approval so you know your budget.</li><li>Plan for the down payment and for closing costs, including legal fees and land transfer tax (Ontario, and an additional municipal tax in Toronto).</li><li>List your must-haves and nice-to-haves, then pick your target areas.</li><li>Set up listing alerts and book viewings.</li><li>For condos, ask for the status certificate and review it carefully.</li><li>Make an offer with Jade, including conditions that fit your situation.</li><li>Arrange a home inspection and confirm financing within the condition period.</li><li>Hire a real estate lawyer to review documents and handle closing.</li><li>Arrange home insurance and utilities before closing.</li><li>Do the final walk-through before the closing date.</li></ol><p class="note">General information, not legal or financial advice. Costs and rules change: confirm with your lender and lawyer.</p><p style="margin-top:1rem;display:flex;gap:.7rem;flex-wrap:wrap"><button class="btn" type="button" onclick="window.print()">Print</button><a class="btn ghost" href="#/contact" data-subject="Buying">Talk to Jade</a></p></div></div>
+</section></div>
+<div data-page="market-report" hidden>
+<header class="ph"><img data-slot="band" alt=""><div class="wrap"><span class="kicker">Market report</span><h1>Toronto market report</h1><p class="lead">Get the update in your inbox.</p></div></header>
+<section><div class="wrap split">
+ <div><h2>Know where the market stands</h2><p class="lead" style="margin-top:1rem">Subscribe to receive Jade's market updates for Toronto, with what is selling, how prices are moving and what it means for buyers and sellers.</p><ul class="ticks" style="margin-top:1.2rem"><li>Sent by email</li><li>Unsubscribe at any time</li></ul></div>
+ <div class="boxf"><b class="bt">Subscribe to the market report</b><form class="f lead-form" data-type="report" data-source="Market report">
+ <div class="row"><label>Name<input name="name" required autocomplete="name"></label><label>Email<input name="email" type="email" required autocomplete="email"></label></div><label>I am interested in<select name="subject"><option>Buying</option><option>Selling</option><option>Investing</option><option>Just following the market</option></select></label>
+ <div class="hp"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+ <label class="chk"><input type="checkbox" name="consent" required><span>I agree that Jade Barkie may contact me about my request by phone, text message or email. I can withdraw my consent at any time.</span></label>
+ <div class="fmsg" role="status"></div><button class="btn" type="submit">Subscribe</button>
+</form></div>
+</div></section>
+</div>
+<div data-page="calculator" hidden>
+<header class="ph"><img data-slot="calc" alt=""><div class="wrap"><span class="kicker">Tools</span><h1>Mortgage payment calculator</h1><p class="lead">Canadian rules: interest compounded semi-annually.</p></div></header>
+<section><div class="wrap split">
+ <div class="f" id="mcf">
+  <label>Home price ($)<input id="mc-price" type="number" min="0" step="1000" value="1000000"></label>
+  <label>Down payment ($)<input id="mc-down" type="number" min="0" step="1000" value="200000"></label>
+  <div class="row"><label>Interest rate (%)<input id="mc-rate" type="number" min="0" step="0.05" value="4.5"></label><label>Amortization (years)<select id="mc-am"><option>15</option><option>20</option><option>25</option><option selected>30</option></select></label></div>
+  <label>Payment frequency<select id="mc-freq"><option value="12">Monthly</option><option value="26">Bi-weekly</option><option value="52">Weekly</option></select></label>
+ </div>
+ <div class="mcres"><small id="mc-lbl">Monthly payment</small><b id="mc-pay">–</b><dl><dt>Mortgage amount</dt><dd id="mc-loan">–</dd><dt>Total interest over the amortization</dt><dd id="mc-int">–</dd></dl><p class="note" id="mc-warn"></p><p class="note">An estimate for illustration only, excluding mortgage default insurance premiums, property tax and closing costs. Confirm with your lender.</p><p style="margin-top:1rem"><a class="btn" href="#/contact" data-subject="Buying">Talk to Jade</a></p></div>
+</div></section>
+</div>
+<div data-page="faq" hidden>
+<header class="ph"><img data-slot="faq" alt=""><div class="wrap"><span class="kicker">FAQ</span><h1>Frequently asked questions</h1><p class="lead">Straight answers to common questions.</p></div></header><section><div class="wrap" style="max-width:900px"><details class="faq"><summary>Is the home evaluation really free?</summary><p>Yes. It is free and without obligation. It is an informal opinion of value based on recent comparable sales, not a formal appraisal.</p></details><details class="faq"><summary>How much do I need to buy a home?</summary><p>Beyond the down payment, plan for closing costs such as legal fees, land transfer tax (Ontario, plus a municipal tax in Toronto) and adjustments. A lender can confirm your pre-approval and the minimum down payment for your price.</p></details><details class="faq"><summary>Do I need mortgage default insurance?</summary><p>A down payment under 20% generally requires mortgage default insurance. Rules change, so confirm current requirements with a lender.</p></details><details class="faq"><summary>How long does it take to sell a home?</summary><p>It depends on the price, condition and the market. Jade will give you a realistic timeline with your pricing strategy.</p></details><details class="faq"><summary>Should I get a home inspection?</summary><p>It is strongly recommended for most purchases, usually as a condition of the offer. For condos, review the status certificate too.</p></details><details class="faq"><summary>How do I get started?</summary><p>Send a message or request a free estimate. Jade will reply to plan the next step, with no pressure.</p></details><p class="note" style="margin-top:1rem">General information, not legal or financial advice.</p></div></section></div>
+<div data-page="blog" hidden>
+<header class="ph"><img data-slot="blog" alt=""><div class="wrap"><span class="kicker">Blog</span><h1>Stories and insights</h1><p class="lead">Buying, selling and living in Toronto.</p></div></header><section class="ivory"><div class="wrap"><div class="cols3" id="postsAll"></div></div></section></div>
+<div data-page="contact" hidden>
+<header class="ph"><img data-slot="hero" alt=""><div class="wrap"><span class="kicker">Contact</span><h1>Let's talk about your next move</h1><p class="lead">Reply within one business day.</p></div></header>
+<section><div class="wrap split">
+ <div><h2>Get in touch</h2><ul class="ci dk0" id="ci" style="margin-top:1.2rem"></ul>
+  <p class="note" style="margin-top:1rem" id="ftr-hours-note">Office hours: weekdays, 9:00 am to 5:00 pm (to confirm).</p>
+  <p style="margin-top:1rem"><a class="btn ghost" id="dirLink" href="#" target="_blank" rel="noopener">Get directions ↗</a></p></div>
+ <div class="boxf"><b class="bt">Send a message</b><form class="f lead-form" data-type="contact" data-source="Contact page">
+ <div class="row"><label>Name<input name="name" required autocomplete="name"></label><label>Email<input name="email" type="email" required autocomplete="email"></label></div><div class="row"><label>Phone (optional)<input name="phone" type="tel" autocomplete="tel"></label><label>I am interested in<select name="subject" id="c-subject"><option>Buying</option><option>Selling</option><option>Investing</option><option>Home valuation</option><option>Other</option></select></label></div><label>Message<textarea name="message"></textarea></label>
+ <div class="hp"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+ <label class="chk"><input type="checkbox" name="consent" required><span>I agree that Jade Barkie may contact me about my request by phone, text message or email. I can withdraw my consent at any time.</span></label>
+ <div class="fmsg" role="status"></div><button class="btn" type="submit">Send message</button>
+</form></div>
+</div></section>
+</div>
+<div data-page="privacy" hidden>
+<header class="ph plain"><div class="wrap"><span class="kicker">Legal</span><h1>Privacy policy</h1><p class="lead">Template text to be reviewed by the brokerage and a lawyer before launch.</p></div></header>
+<section><div class="wrap legal-t">
+<h2>1. Who we are</h2><p>This website is operated by Jade Barkie, a real estate agent with eXp Realty, Brokerage ("we"). Contact us at the email or phone shown on the Contact page.</p>
+<h2>2. What we collect</h2><p>Information you give us in forms (name, email, phone, property address, message, preferences), the consent you give, and basic technical data needed to run the site. This preview stores form data in your browser and, when configured, sends it to the site owner's form service.</p>
+<h2>3. How we use it</h2><p>To reply to your requests, provide valuations and property information, send the newsletter or reports you ask for, and improve our services. We do not sell your personal information.</p>
+<h2>4. Consent and electronic messages</h2><p>By ticking the consent box you agree that we may contact you by phone, text message or email about your request. You may withdraw consent at any time by replying "stop" to a text, using the unsubscribe link in any email or contacting us. Message and data rates may apply.</p>
+<h2>5. Sharing</h2><p>We may share information with the brokerage, service providers who host or support this site, and professionals involved in a transaction you request, only as needed and as permitted by law.</p>
+<h2>6. Retention and your rights</h2><p>We keep personal information only as long as needed for the purposes above or as required by law. You may ask to access or correct your information, or to have it deleted, by contacting us.</p>
+<h2>7. Security</h2><p>We use reasonable safeguards, but no online service is completely secure.</p>
+<h2>8. Changes</h2><p>We may update this policy. The date of the latest update will appear here once the site is published.</p>
+</div></section></div>
+<div data-page="terms" hidden>
+<header class="ph plain"><div class="wrap"><span class="kicker">Legal</span><h1>Terms of use</h1><p class="lead">Template text to be reviewed by the brokerage and a lawyer before launch.</p></div></header>
+<section><div class="wrap legal-t">
+<h2>1. Use of this site</h2><p>The content is general information about real estate and is provided for convenience. It is not legal, financial, tax or investment advice.</p>
+<h2>2. Listings and estimates</h2><p>Listing information is for illustration and may change without notice. Estimates of value are informal opinions based on available information and are not appraisals. Features, prices and availability must be verified.</p>
+<h2>3. Calculators and tools</h2><p>Results are estimates for illustration only. Confirm all figures with a lender, lawyer or other professional.</p>
+<h2>4. Intellectual property</h2><p>Site content, text, images and design belong to their owners and may not be copied without permission. The trademarks REALTOR®, REALTORS® and the REALTOR® logo are controlled by The Canadian Real Estate Association (CREA) and identify real estate professionals who are members of CREA. MLS® and related marks are owned by CREA.</p>
+<h2>5. Links</h2><p>We are not responsible for the content or practices of third-party sites.</p>
+<h2>6. Limitation of liability</h2><p>To the extent permitted by law, we are not liable for losses arising from the use of this site or reliance on its content.</p>
+<h2>7. Governing law</h2><p>These terms are governed by the laws of Ontario and the federal laws of Canada applicable there.</p>
+</div></section></div>
+<div data-page="cookies" hidden>
+<header class="ph plain"><div class="wrap"><span class="kicker">Legal</span><h1>Cookie policy</h1><p class="lead">Template text to be reviewed by the brokerage and a lawyer before launch.</p></div></header>
+<section><div class="wrap legal-t">
+<h2>What we use</h2><p>This site uses only essential browser storage: it remembers your cookie choice and a few settings so the site works. It does not currently use advertising or analytics cookies.</p>
+<h2>If that changes</h2><p>If analytics or advertising tools (such as Google Analytics or Meta Pixel) are added, they will only run after you accept, and this page will list them.</p>
+<h2>Your choice</h2><p>You can change your choice at any time:</p><p><button class="btn sm" type="button" id="ckReset">Manage cookie preferences</button></p>
+</div></section></div>
+<div data-page="accessibility" hidden>
+<header class="ph plain"><div class="wrap"><span class="kicker">Legal</span><h1>Accessibility statement</h1><p class="lead">Template text to be reviewed by the brokerage and a lawyer before launch.</p></div></header>
+<section><div class="wrap legal-t">
+<p>We aim to make this website usable by everyone, including people who use assistive technology, in line with the Accessibility for Ontarians with Disabilities Act (AODA) and WCAG 2.1 Level AA where applicable.</p>
+<p>If you have trouble using any part of the site, or need information in another format, contact us using the details on the Contact page and we will help.</p>
+</div></section></div>
+</main>
+<footer><div class="wrap">
+ <div class="fg">
+  <div><a class="logo" id="flogo" href="#/"><b style="color:#fff">Jade Barkie</b><small>Real estate · Toronto</small></a>
+   <p style="margin-top:1rem;max-width:34ch">Helping buyers, sellers and investors make confident decisions in Toronto.</p>
+   <div class="soc"><a id="igLink" href="#" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a><a id="liLink" href="#" target="_blank" rel="noopener" aria-label="LinkedIn" hidden>LinkedIn</a><a id="fbLink" href="#" target="_blank" rel="noopener" aria-label="Facebook" hidden>Facebook</a></div></div>
+  <div><h4>Visit &amp; contact</h4><ul><li id="ftr-addr"></li><li><a id="ftr-dir" href="#" target="_blank" rel="noopener">Get directions ↗</a></li><li><a id="ftr-tel" href="#"></a></li><li><a id="ftr-mail" href="#"></a></li><li>Weekdays 9:00 am – 5:00 pm</li></ul></div>
+  <div><h4>Explore</h4><ul><li><a href="#/about">About</a></li><li><a href="#listings">Properties</a></li><li><a href="#/neighbourhoods">Neighbourhoods</a></li><li><a href="#/buy">Buyers</a></li><li><a href="#/sell">Sellers</a></li><li><a href="#/blog">Blog</a></li><li><a href="#/contact">Contact</a></li></ul></div>
+  <div><h4>Free resources</h4><ul><li><a href="#/sell">Free home evaluation</a></li><li><a href="#/buyers-guide">Buyer's checklist</a></li><li><a href="#/market-report">Market report</a></li><li><a href="#/calculator">Mortgage calculator</a></li><li><a href="#/faq">FAQ</a></li></ul></div>
+  <div><h4>Legal</h4><ul><li><a href="#/privacy">Privacy policy</a></li><li><a href="#/terms">Terms of use</a></li><li><a href="#/cookies">Cookie policy</a></li><li><a href="#/accessibility">Accessibility</a></li><li><button class="linkbtn" id="ckPref" type="button">Cookie preferences</button></li><li><button class="linkbtn" id="adminBtn" type="button">Admin</button></li></ul></div>
+ </div>
+ <div class="legal">
+  <p id="legal"></p>
+  <p>Some listings shown may not be exclusive to this brokerage. The trademarks REALTOR®, REALTORS® and the REALTOR® logo are controlled by The Canadian Real Estate Association (CREA). MLS® is a trademark of CREA.</p>
+  <p>© <span id="yr"></span> Jade Barkie. All rights reserved. · <a href="#/privacy">Privacy</a> · <a href="#/terms">Terms</a></p>
+ </div>
+</div></footer>
+<div id="ckbar" class="ckbar" role="dialog" aria-label="Cookie notice" hidden><p>We use only essential storage to make this site work. No advertising trackers run on this preview. <a href="#/cookies" style="color:var(--gold);text-decoration:underline">Cookie policy</a></p><div class="ckb"><button class="btn ghost sm" id="ckNo" type="button">Essential only</button><button class="btn gold sm" id="ckOk" type="button">Accept</button></div></div>
+<button id="totop" class="totop" type="button" aria-label="Back to top">↑</button>
+<div class="mbar"><a href="#" id="mCall">Call</a><a class="g" href="#/sell">Free home value</a></div>
+<dialog id="lmdlg" aria-label="Free checklist"><button class="dx" type="button" data-close aria-label="Close">✕</button><div style="padding:1.6rem;max-width:460px"><span class="kicker">Free checklist</span><h3 style="font-size:1.6rem;margin:.4rem 0">Buying in Toronto? Get the 10-step checklist.</h3><p class="note" style="margin-bottom:1rem">From pre-approval to closing day. Unlocks instantly.</p><form class="f lead-form" data-type="guide" data-source="Popup: buyer checklist" data-unlock="guide">
+ <label>Name<input name="name" required autocomplete="name"></label><label>Email<input name="email" type="email" required autocomplete="email"></label>
+ <div class="hp"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+ <label class="chk"><input type="checkbox" name="consent" required><span>I agree that Jade Barkie may contact me about my request by phone, text message or email. I can withdraw my consent at any time.</span></label>
+ <div class="fmsg" role="status"></div><button class="btn" type="submit">Get the checklist</button>
+</form></div></dialog>
+<dialog id="pdlg" aria-label="Property"><button class="dx" type="button" data-close aria-label="Close">✕</button><div id="pdbody"></div></dialog>
+<dialog id="postdlg" aria-label="Article"><button class="dx" type="button" data-close aria-label="Close">✕</button><div id="postbody" style="padding:1.6rem;max-width:700px"></div></dialog>
+<dialog id="privdlg" aria-label="Privacy"><button class="dx" type="button" data-close aria-label="Close">✕</button><div style="padding:1.6rem;max-width:560px"><h3>Privacy &amp; terms</h3><p style="margin-top:.8rem">See the full <a href="#/privacy" data-close>privacy policy</a> and <a href="#/terms" data-close>terms of use</a>.</p></div></dialog>
+<div id="admin" aria-label="Admin"></div>
+
+<script>
+const IM={"portrait": "data:image/webp;base64,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"};
+(function(){
+'use strict';
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid=()=>Math.random().toString(36).slice(2,9)+Date.now().toString(36).slice(-4);
+const safeImg=s=>(typeof s==='string'&&/^data:image\/(jpeg|png|webp|svg\+xml)[;,]/.test(s))?s:'';
+const hash=s=>{let h=7;for(const c of String(s))h=(h*31+c.charCodeAt(0))|0;return Math.abs(h)%997+1};
+const IMGS=[['logo','Logo (transparent PNG works best)'],['hero','Hero image (wide, landscape)'],['portrait','Jade portrait'],['about','About page image'],['sell','Sellers page image'],['buy','Buyers page image'],['band','Market report image'],['nb','Neighbourhoods image']];
+
+/* ---------- illustrated scenes (replace with real photos in Admin) ---------- */
+function rng(a){return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const MOOD={
+ day:{sky:['#6aa5d6','#bcdcee','#eef5f6'],fac:'#f3efe8',fac2:'#e0d9ca',dark:'#2b2b30',glass:'#a9cde2',lit:0,gnd:'#628a4a',tree:'#2e5b3a',tree2:'#45794d',water:'#58a8c8',sand:'#e8d3a6',hill:'#8fb1a0',roof:'#4a4a52',thatch:'#8a6a3b',tint:0,sun:['#fffbe0',960,150,56]},
+ dusk:{sky:['#161d3f','#6b4a7a','#e5804e','#f9d394'],fac:'#d9cdbf',fac2:'#bfb1a2',dark:'#1d1d23',glass:'#ffcf7a',lit:1,gnd:'#2c3a31',tree:'#14251c',tree2:'#1f3a2b',water:'#38598a',sand:'#9c8a73',hill:'#2b2c4a',roof:'#24242b',thatch:'#4d3a20',tint:.28,sun:['#ffe1a8',250,515,74]},
+ night:{sky:['#040612','#0e1736','#25355e'],fac:'#6b6870',fac2:'#57545c',dark:'#15151a',glass:'#ffd27a',lit:1,gnd:'#16221b',tree:'#0a1510',tree2:'#102019',water:'#122246',sand:'#4a4338',hill:'#10162c',roof:'#101014',thatch:'#2a2013',tint:.5,sun:['#eef2ff',980,140,34]}
+};
+const win=(x,y,w,h,m)=>`${m.lit?`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${m.glass}" opacity=".55" filter="url(#b)"/>`:''}<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${m.glass}"/>${m.lit?'':`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="url(#sh)"/>`}`;
+const tree=(x,y,s,m)=>`<rect x="${x-5*s}" y="${y+50*s}" width="${10*s}" height="${60*s}" fill="#2a1d14"/><ellipse cx="${x}" cy="${y}" rx="${70*s}" ry="${85*s}" fill="${m.tree}"/><ellipse cx="${x-14*s}" cy="${y-18*s}" rx="${48*s}" ry="${58*s}" fill="${m.tree2}"/>`;
+const palm=(x,y,h,d,m)=>{const tx=x+d*50,ty=y-h;let o=`<path d="M${x} ${y} Q${x+d*35} ${y-h/2} ${tx} ${ty}" stroke="#5b4630" stroke-width="14" fill="none" stroke-linecap="round"/>`;[-170,-135,-100,-62,-22,15,52,150].forEach(a=>{const r=a*Math.PI/180;o+=`<path d="M${tx} ${ty} Q${tx+Math.cos(r)*70} ${ty-34+Math.sin(r)*20} ${tx+Math.cos(r)*140} ${ty+Math.sin(r)*36+62}" stroke="${m.lit?m.tree2:'#1f6a3e'}" stroke-width="10" fill="none" stroke-linecap="round"/>`});return o};
+const BUILD={
+ villa(m,r){let o=`<rect y="610" width="1200" height="190" fill="${m.gnd}"/>`+tree(90,500,1.1,m)+tree(1110,490,1.2,m);
+  o+=`<rect x="170" y="430" width="640" height="190" fill="${m.fac}"/><rect x="170" y="430" width="640" height="190" fill="url(#sh)" opacity=".5"/>`;
+  o+=win(205,462,330,138,m);for(let i=1;i<6;i++)o+=`<rect x="${205+i*55-2}" y="462" width="4" height="138" fill="${m.dark}"/>`;
+  o+=`<rect x="575" y="470" width="190" height="150" fill="#8a5a36"/>`;for(let i=0;i<12;i++)o+=`<rect x="${580+i*15.5}" y="470" width="2" height="150" fill="#000" opacity=".25"/>`;
+  o+=`<rect x="640" y="520" width="60" height="100" fill="${m.dark}"/>${m.lit?`<rect x="648" y="528" width="44" height="86" fill="${m.glass}" opacity=".85"/>`:''}`;
+  o+=`<rect x="330" y="300" width="650" height="132" fill="${m.dark}"/>`+win(365,330,240,78,m)+`<rect x="480" y="330" width="4" height="78" fill="${m.dark}"/>`+`<rect x="660" y="318" width="280" height="96" fill="${m.fac2}"/>`+win(690,336,90,60,m)+win(820,336,90,60,m);
+  o+=`<rect x="300" y="286" width="710" height="16" fill="${m.roof}"/><rect x="150" y="418" width="690" height="14" fill="${m.roof}"/><rect x="120" y="620" width="780" height="36" fill="${m.fac2}"/>`;
+  o+=`<path d="M200 662 H860 L915 785 H150Z" fill="${m.water}"/><path d="M200 662 H860 L915 785 H150Z" fill="url(#w)" opacity=".55"/>`;
+  if(m.lit)o+=`<rect x="240" y="676" width="270" height="70" fill="${m.glass}" opacity=".22" filter="url(#b)"/>`;
+  o+=`<path d="M230 700 H800 M210 730 H830" stroke="#fff" stroke-opacity=".25" stroke-width="3"/>`;return o},
+ house(m,r){let o=`<rect y="620" width="1200" height="180" fill="${m.gnd}"/><path d="M470 800 L555 620 H690 L840 800Z" fill="${m.sand}" opacity=".75"/>`+tree(100,520,1.15,m)+tree(1110,510,1.1,m);
+  o+=`<rect x="700" y="250" width="60" height="130" fill="${m.fac2}"/><rect x="300" y="440" width="560" height="180" fill="${m.fac}"/><rect x="300" y="440" width="560" height="180" fill="url(#sh)" opacity=".4"/>`;
+  o+=`<rect x="860" y="492" width="230" height="128" fill="${m.fac2}"/><path d="M845 494 L975 412 L1105 494Z" fill="${m.roof}"/><rect x="900" y="530" width="150" height="90" fill="${m.dark}" opacity=".9"/>`;for(let i=1;i<4;i++)o+=`<rect x="900" y="${530+i*22}" width="150" height="2" fill="#fff" opacity=".18"/>`;
+  o+=`<path d="M265 446 L580 255 L895 446Z" fill="${m.roof}"/><path d="M440 446 L580 340 L720 446Z" fill="${m.fac}"/><path d="M440 446 L580 340 L720 446" fill="none" stroke="${m.roof}" stroke-width="9"/>`+win(560,380,40,40,m);
+  [[335,478],[430,478],[690,478],[765,478]].forEach(([x,y])=>{o+=win(x,y,58,100,m)+`<rect x="${x+27}" y="${y}" width="4" height="100" fill="${m.fac}"/><rect x="${x}" y="${y+48}" width="58" height="4" fill="${m.fac}"/><rect x="${x-14}" y="${y}" width="12" height="100" fill="${m.dark}" opacity=".75"/><rect x="${x+60}" y="${y}" width="12" height="100" fill="${m.dark}" opacity=".75"/>`});
+  o+=`<rect x="540" y="498" width="80" height="122" fill="#6a4630"/>${m.lit?`<rect x="552" y="512" width="56" height="60" fill="${m.glass}" opacity=".8"/>`:''}<rect x="505" y="480" width="150" height="12" fill="${m.roof}"/><rect x="510" y="492" width="10" height="128" fill="${m.fac2}"/><rect x="640" y="492" width="10" height="128" fill="${m.fac2}"/><rect x="520" y="620" width="120" height="10" fill="${m.fac2}"/>`;return o},
+ tower(m,r){let o=`<rect y="620" width="1200" height="180" fill="${m.water}"/><rect y="620" width="1200" height="180" fill="url(#w)" opacity=".7"/>`;
+  [[110,230,470],[370,270,600],[690,230,500],[950,190,360]].forEach(([x,w,h],i)=>{const t=620-h;o+=`<rect x="${x}" y="${t}" width="${w}" height="${h}" fill="${i%2?m.fac2:m.fac}"/><rect x="${x}" y="${t}" width="${w}" height="${h}" fill="url(#sh)" opacity=".5"/><rect x="${x-6}" y="${t-10}" width="${w+12}" height="10" fill="${m.dark}"/>`;
+   for(let yy=t+18;yy<600;yy+=40)for(let xx=x+14;xx<x+w-24;xx+=32){const on=m.lit?r()>.42:r()>.12;o+=`<rect x="${xx}" y="${yy}" width="20" height="26" fill="${on?m.glass:m.dark}" opacity="${on?(m.lit?.95:.8):.5}"/>`}});
+  o+=`<rect y="620" width="1200" height="6" fill="${m.dark}"/><path d="M0 700 Q300 660 600 700 T1200 690" stroke="#fff" stroke-opacity=".18" stroke-width="3" fill="none"/>`;return o},
+ townhome(m,r){let o=`<rect y="600" width="1200" height="200" fill="${m.gnd}"/><rect y="650" width="1200" height="150" fill="#3a3a40"/><rect y="632" width="1200" height="18" fill="${m.sand}"/>`;
+  ['#8f4e3d','#d9d1c2','#4f6075','#b78d5b','#7c8d72'].forEach((c,i)=>{const x=40+i*224,t=300+(i%2)*26;o+=`<rect x="${x}" y="${t}" width="218" height="${632-t}" fill="${c}"/><rect x="${x}" y="${t}" width="218" height="${632-t}" fill="#000" opacity="${m.tint}"/><rect x="${x-4}" y="${t-12}" width="226" height="14" fill="${m.dark}"/>`;
+   for(let k=0;k<2;k++){o+=win(x+22+k*98,t+34,70,84,m)+win(x+22+k*98,t+150,70,84,m)}
+   o+=`<rect x="${x+82}" y="540" width="54" height="92" fill="${m.dark}"/><rect x="${x+72}" y="620" width="74" height="12" fill="${m.fac2}"/>${m.lit?`<circle cx="${x+109}" cy="526" r="5" fill="${m.glass}"/>`:''}`});
+  o+=tree(20,560,.7,m)+tree(1180,560,.7,m);return o},
+ tropical(m,r){let o=`<rect y="500" width="1200" height="160" fill="${m.water}"/><rect y="500" width="1200" height="160" fill="url(#w)" opacity=".5"/>`;
+  for(let i=0;i<14;i++)o+=`<rect x="${r()*1100|0}" y="${515+i*9}" width="${40+r()*90|0}" height="2" fill="#fff" opacity=".25"/>`;
+  o+=`<path d="M0 650 Q300 604 600 636 T1200 626 V800 H0Z" fill="${m.sand}"/><rect x="340" y="474" width="470" height="170" fill="${m.fac}"/><rect x="340" y="474" width="470" height="170" fill="#000" opacity="${m.tint}"/>`;
+  o+=`<path d="M300 486 L420 372 H730 L850 486Z" fill="${m.thatch}"/>`+win(380,520,390,106,m);for(let i=1;i<5;i++)o+=`<rect x="${380+i*78-2}" y="520" width="4" height="106" fill="${m.fac}"/>`;
+  o+=`<rect x="320" y="640" width="530" height="12" fill="${m.fac2}"/>`;
+  o+=palm(170,660,310,-1,m)+palm(1030,670,340,1,m)+palm(930,650,230,1,m)+palm(250,690,200,1,m);return o},
+ skyline(m,r){let o=`<rect y="600" width="1200" height="200" fill="${m.water}"/><rect y="600" width="1200" height="200" fill="url(#w)" opacity=".6"/>`,b='',x=-20;
+  while(x<1200){const w=34+r()*56|0,h=90+r()*250|0;b+=`<rect x="${x}" y="${600-h}" width="${w}" height="${h}" fill="${m.dark}"/>`;for(let yy=600-h+10;yy<590;yy+=17)for(let xx=x+6;xx<x+w-8;xx+=13)if(r()>(m.lit?.58:.8))b+=`<rect x="${xx}" y="${yy}" width="6" height="9" fill="${m.glass}" opacity="${m.lit?.9:.55}"/>`;x+=w+2+r()*8}
+  b+=`<path d="M594 600 L598 330 L602 330 L606 600Z" fill="${m.dark}"/><rect x="598.5" y="140" width="3" height="200" fill="${m.dark}"/><ellipse cx="600" cy="338" rx="24" ry="10" fill="${m.dark}"/><rect x="590" y="322" width="20" height="14" fill="${m.dark}"/>${m.lit?`<ellipse cx="600" cy="338" rx="24" ry="10" fill="${m.glass}" opacity=".5"/>`:''}`;
+  o+=`<g id="sk">${b}</g><clipPath id="cw"><rect y="600" width="1200" height="200"/></clipPath><g clip-path="url(#cw)"><use href="#sk" transform="translate(0,1200) scale(1,-1)" opacity=".22"/></g><rect y="780" width="1200" height="20" fill="${m.dark}"/>`;return o}
+};
+const cache={};
+function scene(kind,mood,seed){const key=kind+mood+seed;if(cache[key])return cache[key];const m=MOOD[mood]||MOOD.day,r=rng((seed||1)*7919+13);
+ const stops=m.sky.map((c,i)=>`<stop offset="${(i/(m.sky.length-1)).toFixed(2)}" stop-color="${c}"/>`).join('');
+ let o=`<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">${stops}</linearGradient><filter id="b" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter><linearGradient id="w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${m.water}"/><stop offset="1" stop-color="#000" stop-opacity=".5"/></linearGradient><linearGradient id="sh" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".4"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><rect width="1200" height="800" fill="url(#g)"/>`;
+ if(mood!=='day')for(let i=0;i<70;i++)o+=`<circle cx="${r()*1200|0}" cy="${r()*(mood==='night'?420:200)|0}" r="${(r()*1.3+.3).toFixed(1)}" fill="#fff" opacity="${(r()*.7+.2).toFixed(2)}"/>`;
+ const s=m.sun;o+=`<circle cx="${s[1]}" cy="${s[2]}" r="${s[3]*2.4}" fill="${s[0]}" opacity=".2" filter="url(#b)"/><circle cx="${s[1]}" cy="${s[2]}" r="${s[3]}" fill="${s[0]}" opacity=".95"/>`;
+ o+=`<path d="M0 570 Q200 480 400 550 T800 530 T1200 560 V800 H0Z" fill="${m.hill}" opacity=".92"/>`+(BUILD[kind]||BUILD.villa)(m,r);
+ return cache[key]='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">${o}</svg>`)}
+
+/* ---------- store ---------- */
+const KEY='jade_site_v1';let mem=null;
+const BIO_EN="Jade Barkie helps buyers, sellers and investors make confident decisions in the Toronto market, with straight answers, clear numbers and a plan for every step. Ask a question, request an estimate or simply start a conversation: there is no pressure and no obligation.";
+function seed(){return{v:1,pass:null,
+ settings:{phone:'',email:'',instagram:'',linkedin:'',facebook:'',address:'4711 Yonge St, 10th Floor, Toronto, ON M2N 6K8',formEndpoint:'',brokerage:'eXp Realty, Brokerage',showBanner:true,portrait:'',hero:'',logo:'',sell:'',buy:'',band:'',about:'',nb:'',bio_en:BIO_EN},
+ markets:[{id:'downtown',name:'Downtown Toronto',tag:'Condos & lofts',kind:'tower'},{id:'midtown',name:'Midtown',tag:'Yonge & Eglinton',kind:'house'},{id:'north',name:'North York',tag:'Family homes',kind:'villa'},{id:'east',name:'East End',tag:'Semis & townhomes',kind:'townhome'}],
+ listings:[
+  {id:'l1',sample:1,title:'Yorkville Penthouse',location:'Yorkville, Toronto',market:'downtown',type:'condo',kind:'tower',status:'sale',price:3250000,cur:'CAD',beds:3,baths:3,sqft:2400,featured:1,photos:[],desc:'Sample listing. Corner suite with city views. Replace with the real description.'},
+  {id:'l2',sample:1,title:'Annex Victorian',location:'The Annex, Toronto',market:'midtown',type:'house',kind:'house',status:'sale',price:2150000,cur:'CAD',beds:4,baths:3,sqft:2800,featured:1,photos:[],desc:'Sample listing. A classic home on a quiet, tree-lined street.'},
+  {id:'l3',sample:1,title:'Forest Hill Residence',location:'Forest Hill, Toronto',market:'midtown',type:'villa',kind:'villa',status:'sale',price:4850000,cur:'CAD',beds:5,baths:6,sqft:5600,featured:1,photos:[],desc:'Sample listing. Generous rooms, a landscaped garden and a private terrace.'},
+  {id:'l4',sample:1,title:'Leslieville Semi',location:'Leslieville, Toronto',market:'east',type:'house',kind:'house',status:'sale',price:1390000,cur:'CAD',beds:3,baths:2,sqft:1800,featured:0,photos:[],desc:'Sample listing. Bright semi near cafés and parks.'},
+  {id:'l5',sample:1,title:'Liberty Village Loft',location:'Liberty Village, Toronto',market:'downtown',type:'condo',kind:'tower',status:'sold',price:865000,cur:'CAD',beds:2,baths:2,sqft:1150,featured:0,photos:[],desc:'Sample listing. Recently sold.'},
+  {id:'l6',sample:1,title:'North York Family Home',location:'North York, Toronto',market:'north',type:'house',kind:'villa',status:'sale',price:1750000,cur:'CAD',beds:4,baths:4,sqft:3200,featured:0,photos:[],desc:'Sample listing. Room for the whole family close to transit.'}],
+ leads:[],
+ testimonials:[1,2,3].map(i=>({id:'t'+i,sample:1,name:'Client name',role:'Buyer / Seller',text:'Your client testimonial goes here. Add real testimonials, with each client\'s permission, in the admin area.'})),
+ posts:[
+  {id:'p1',sample:1,tag:'Buying',title:'Five questions to ask before you make an offer',kind:'house',body:'Sample article. Replace with your own writing.\n\nBefore making an offer, confirm your financing, the total closing costs, what the inspection should cover and what conditions make sense for you.'},
+  {id:'p2',sample:1,tag:'Selling',title:'Preparing your home for sale',kind:'villa',body:'Sample article. Replace with your own writing.\n\nDeclutter, repair the small things, light every room and price with comparable sales.'},
+  {id:'p3',sample:1,tag:'Market',title:'Reading the Toronto market',kind:'tower',body:'Sample article. Replace with your own writing.\n\nLook at sales, inventory and days on market together instead of a single headline number.'}]}}
+let S;
+function load(){try{const s=localStorage.getItem(KEY);if(s)return JSON.parse(s)}catch(e){}return mem}
+function save(){mem=S;try{localStorage.setItem(KEY,JSON.stringify(S));return true}catch(e){toast('Storage is full or unavailable. Export a backup in Admin > Settings and remove large photos.');return false}}
+S=load();if(!S||!S.settings){S=seed()}else{const d=seed();S.settings=Object.assign({},d.settings,S.settings);['markets','listings','leads','testimonials','posts'].forEach(k=>{if(!Array.isArray(S[k]))S[k]=d[k]})}
+
+/* ---------- i18n ---------- */
+let L='en';
+const D={sale:['For sale','À vendre'],sold:['Sold','Vendu'],pending:['Pending','En attente'],sample:['Sample','Exemple'],beds:['Beds','Chambres'],baths:['Baths','Salles de bain'],sqft:['Sq ft','pi²'],house:['House','Maison'],condo:['Condo','Condo'],townhome:['Townhome','Maison de ville'],villa:['Villa','Villa'],allm:['All markets','Tous les marchés'],allt:['All types','Tous les types'],anyb:['Any budget','Tous budgets'],none:['No properties match these filters.','Aucune propriété ne correspond à ces filtres.'],ok:['Thank you. Your request was received.','Merci. Votre demande a bien été reçue.'],tour:['Request details or a showing','Demander des détails ou une visite'],send:['Send request','Envoyer'],name:['Name','Nom'],email:['Email','Courriel'],phone:['Phone (optional)','Téléphone (facultatif)'],msg:['Message (optional)','Message (facultatif)'],cons:["I agree that Jade Barkie may contact me about my request by phone, text message or email. I can withdraw my consent at any time.","J'accepte que l'équipe de Jade Barkie me contacte au sujet de ma demande. Je peux retirer mon consentement en tout temps."],read:['Read article','Lire l\'article'],call:['Call','Appeler'],office:['Office','Bureau'],intl:['International','International'],mail:['Email','Courriel'],brokerage:['Brokerage','Courtage'],brokerPh:['[registered brokerage name to confirm]','[nom du courtier inscrit à confirmer]'],disc:['Listing information is for illustration only and may change without notice. Estimates are informal opinions of value, not appraisals.',"L'information sur les biens est fournie à titre indicatif et peut changer sans préavis. Les estimations sont des opinions informelles de valeur, pas des évaluations agréées."],team:['Real estate agent','Agente immobilière'],photoSoon:['Photo to come','Photo à venir'],more:['Another area? Ask Jade','Un autre marché? Demandez à Jade'],sampleTag:['Sample','Exemple'],invalid:['Please check the form.','Veuillez vérifier le formulaire.']};
+const T=k=>(D[k]||[k,k])[L==='fr'?1:0];
+const fmt=l=>{try{return new Intl.NumberFormat(L==='fr'?'fr-CA':'en-CA',{style:'currency',currency:l.cur||'CAD',maximumFractionDigits:0}).format(l.price||0)}catch(e){return '$'+(l.price||0)}};
+function applyLang(){document.documentElement.lang=L;$$('[data-en]').forEach(e=>{const v=e.dataset[L];if(v!=null)e.textContent=v});$$('[data-ph-en]').forEach(e=>e.placeholder=e.dataset[L==='fr'?'phFr':'phEn']);renderAll()}
+
+/* ---------- public render ---------- */
+const F={status:'all',market:'all',type:'all',budget:0};
+const TYPES=['house','condo','townhome','villa'];
+const LPH={};
+const TILEIMG={};
+const ALIAS={};
+const slotSrc=k=>safeImg(S.settings[k])||IM[k]||IM[ALIAS[k]]||'';
+const postPic=p=>safeImg(p.image)||IM[p.ik]||scene(p.kind||'villa','dusk',hash(p.id));
+const listImgs=l=>{const p=(l.photos||[]).map(safeImg).filter(Boolean);if(p.length)return p;if(LPH[l.id]&&S.listings.find(x=>x===l&&x.sample))return LPH[l.id].map(k=>IM[k]).filter(Boolean);const s=hash(l.id);return[scene(l.kind||'villa','dusk',s),scene(l.kind||'villa','day',s+1),scene(l.kind||'villa','night',s+2)]};
+function fillSelect(el,items,cur){el.innerHTML=items.map(([v,t])=>`<option value="${esc(v)}">${esc(t)}</option>`).join('');el.value=cur}
+function renderFilters(){const ms=[['all',T('allm')],...S.markets.map(m=>[m.id,m.name])],ts=[['all',T('allt')],...TYPES.map(t=>[t,T(t)])],bs=[[0,T('anyb')],[1000000,'≤ 1M'],[2000000,'≤ 2M'],[3000000,'≤ 3M'],[5000000,'≤ 5M']];
+ fillSelect($('#f-market'),ms,F.market);fillSelect($('#f-type'),ts,F.type);fillSelect($('#q-market'),ms,F.market);fillSelect($('#q-type'),ts,F.type);fillSelect($('#q-budget'),bs,F.budget);
+ $$('#filters .chip').forEach(b=>b.setAttribute('aria-pressed',b.dataset.f===F.status))}
+function renderGrid(){let a=S.listings.filter(l=>(F.status==='all'||l.status===F.status)&&(F.market==='all'||l.market===F.market)&&(F.type==='all'||l.type===F.type)&&(!F.budget||l.price<=F.budget));
+ a=a.slice().sort((x,y)=>(y.featured?1:0)-(x.featured?1:0));
+ $('#grid').innerHTML=a.length?a.map(l=>`<button class="card" type="button" data-open="${esc(l.id)}"><div class="im"><img src="${listImgs(l)[0]}" alt="${esc(l.title)}" loading="lazy"><span class="pill ${l.status==='sold'?'sold':''}">${T(l.status)}</span>${l.sample?`<span class="smp">${T('sample')}</span>`:''}<span class="price">${esc(fmt(l))}</span></div><h3>${esc(l.title)}</h3><p>${esc(l.location)} · ${esc(T(l.type))}</p><div class="meta"><span>${+l.beds||0} ${T('beds')}</span><span>${+l.baths||0} ${T('baths')}</span><span>${(+l.sqft||0).toLocaleString()} ${T('sqft')}</span></div></button>`).join(''):`<p class="empty" style="grid-column:1/-1">${T('none')}</p>`}
+function renderTiles(){const sel=S.markets.slice(0,3).map((m,i)=>`<a class="tile" href="#listings" data-market="${esc(m.id)}"><img src="${IM[TILEIMG[m.id]]||scene(m.kind||'villa',i===0?'dusk':'day',20+i)}" alt="" loading="lazy"><span>${esc(m.name)}<small>${esc(m.tag)}</small></span></a>`);
+ sel.push(`<a class="tile" href="#contact" data-subject="Other"><img src="${IM.p07||scene('tower','night',31)}" alt="" loading="lazy"><span>${T('more')}<small>→</small></span></a>`);$('#tiles').innerHTML=sel.join('')}
+const BARS={};
+function renderQuotes(){const h=S.testimonials.map(q=>`<figure class="quote">${q.sample?`<span class="smp2">${T('sampleTag')}</span>`:''}${q.text?`<q>${esc(q.text)}</q>`:''}<cite>${esc(q.name)}${q.role?' · '+esc(q.role):''}</cite></figure>`).join('');$('#quotes').innerHTML=h;const qa=$('#quotesAll');if(qa)qa.innerHTML=h}
+const postCard=p=>{const inner=`<div class="im"><img src="${postPic(p)}" alt="" loading="lazy"></div><small>${esc(p.tag||'')}${p.date?' · '+esc(p.date):''}${p.read?' · '+esc(p.read):''}</small><h3>${esc(p.title)}</h3><p>${p.body?esc((p.body||'').split('\n').filter(Boolean).slice(-1)[0]||'').slice(0,110)+'…':(p.author?'By '+esc(p.author)+'. Read the full article on falesha.com.':'')}</p>`;return /^https:\/\//.test(p.url||'')?`<a class="post" href="${esc(p.url)}" target="_blank" rel="noopener">${inner}</a>`:`<button class="post" type="button" data-post="${esc(p.id)}">${inner}</button>`};
+function renderPosts(){$('#posts').innerHTML=S.posts.slice(0,3).map(postCard).join('');const pa=$('#postsAll');if(pa)pa.innerHTML=S.posts.map(postCard).join('')}
+const COUNTRIES=[];
+function renderCountries(){const h=COUNTRIES.map(c=>`<li>${esc(c[0])}${c[1]?`<small>${c[1]}</small>`:''}</li>`).join('');['#countries','#countries2'].forEach(s=>{const e=$(s);if(e)e.innerHTML=h})}
+function renderAbout(){const s=S.settings,p=slotSrc('portrait');$('#portrait').innerHTML=p?`<img src="${p}" alt="Jade Barkie" style="object-position:50% 20%;background:#fff">`:`<img src="${scene('villa','dusk',11)}" alt=""><span class="mono">FR</span>`;$('#bio').textContent=s.bio_en;const p2=$('#portrait2');if(p2)p2.innerHTML=$('#portrait').innerHTML;}
+function renderCI(){const s=S.settings,tel=x=>x.replace(/[^\d+]/g,''),ok=u=>/^https:\/\//.test(u||'');
+ const rows=[];rows.push(`<li><small>Phone</small>${s.phone?`<a href="tel:${esc(tel(s.phone))}">${esc(s.phone)}</a>`:'<span>To be added</span>'}</li>`);rows.push(`<li><small>Email</small>${s.email?`<a href="mailto:${esc(s.email)}">${esc(s.email)}</a>`:'<span>To be added</span>'}</li>`);rows.push(`<li><small>Office</small><span>${esc(s.address)}</span></li>`);
+ const ci=$('#ci');if(ci)ci.innerHTML=rows.join('');
+ const dir='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(s.address);['#dirLink','#ftr-dir'].forEach(q=>{const e=$(q);if(e)e.href=dir});
+ $('#ftr-addr').textContent=s.address;const ft=$('#ftr-tel'),fm=$('#ftr-mail');ft.hidden=!s.phone;if(s.phone){ft.href='tel:'+tel(s.phone);ft.textContent=s.phone}fm.hidden=!s.email;if(s.email){fm.href='mailto:'+s.email;fm.textContent=s.email}
+ const mc=$('#mCall');if(s.phone){mc.hidden=false;mc.href='tel:'+tel(s.phone)}else mc.hidden=true;
+ const ig=$('#igLink');ig.hidden=!s.instagram;if(s.instagram){ig.href='https://www.instagram.com/'+encodeURIComponent(s.instagram)}
+ const li=$('#liLink');li.hidden=!ok(s.linkedin);if(ok(s.linkedin))li.href=s.linkedin;const fb=$('#fbLink');fb.hidden=!ok(s.facebook);if(ok(s.facebook))fb.href=s.facebook;
+ $('#yr').textContent=new Date().getFullYear();
+ $('#legal').textContent='Jade Barkie, Real estate agent · '+(s.brokerage||'[registered brokerage name to confirm]')+'. Listing information is for illustration only and may change without notice. Estimates are informal opinions of value, not appraisals.';$('#mock').hidden=!s.showBanner}
+const LOGO0=$('#hlogo').innerHTML;
+const EXT={};
+const SK={hero:['skyline','dusk'],sell:['house','day'],buy:['villa','dusk'],band:['tower','night'],nb:['skyline','day'],calc:['tower','day'],blog:['house','dusk'],faq:['villa','day'],about:['house','dusk']};
+function renderSlots(){$$('[data-slot]').forEach(img=>{const k=img.dataset.slot,s=slotSrc(k)||EXT[k]||(/^(book|comm)/.test(k)?'':scene((SK[k]||['villa','dusk'])[0],(SK[k]||['villa','dusk'])[1],hash(k)));const fb=img.parentElement.querySelector('[data-fb]');if(s){img.referrerPolicy='no-referrer';img.onerror=()=>{img.hidden=true;if(fb)fb.hidden=false};img.src=s;img.hidden=false;if(fb)fb.hidden=true}else{img.removeAttribute('src');img.hidden=true;if(fb)fb.hidden=false}});const g=$('#commGal');if(g)g.hidden=!$$('img',g).some(x=>!x.hidden)}
+function renderImages(){const lg=slotSrc('logo');$('#hlogo').innerHTML=lg?`<img src="${lg}" alt="Jade Barkie">`:LOGO0;$('#flogo').innerHTML=lg?`<img src="${lg}" alt="Jade Barkie">`:LOGO0.replace('<b>','<b style="color:#fff">');renderSlots()}
+function renderAll(){renderFilters();renderGrid();renderTiles();renderQuotes();renderPosts();renderAbout();renderCI();renderCountries();renderSlots()}
+
+/* ---------- interactions ---------- */
+const nav=$('#nav'),burger=$('#burger');
+burger.onclick=()=>{const o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o)};
+nav.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove('open');burger.setAttribute('aria-expanded','false')}});
+
+$$('.tabs button').forEach(b=>b.onclick=()=>{$$('.tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));['buy','sell','invest'].forEach(t=>$('#p-'+t).hidden=t!==b.dataset.tab)});
+const go=id=>{if(location.hash===id){route()}else location.hash=id};
+$('#p-buy').onsubmit=e=>{e.preventDefault();F.market=$('#q-market').value;F.type=$('#q-type').value;F.budget=+$('#q-budget').value;F.status='sale';renderFilters();renderGrid();go('#listings')};
+$('#p-sell').onsubmit=e=>{e.preventDefault();$('#s-addr').value=$('#q-addr').value;go('#sell')};
+$('#p-invest').onsubmit=e=>{e.preventDefault();$('#c-subject').value='Investing';go('#contact')};
+$('#filters').addEventListener('click',e=>{const b=e.target.closest('.chip');if(b){F.status=b.dataset.f;renderFilters();renderGrid()}});
+$('#f-market').onchange=e=>{F.market=e.target.value;renderFilters();renderGrid()};
+$('#f-type').onchange=e=>{F.type=e.target.value;renderFilters();renderGrid()};
+document.addEventListener('click',e=>{
+ const nf=e.target.closest('a[data-f]');if(nf){F.status=nf.dataset.f;F.market='all';F.type='all';F.budget=0;renderFilters();renderGrid()}
+ const t=e.target.closest('[data-market]');if(t){F.market=t.dataset.market;F.status='all';renderFilters();renderGrid()}
+ const sj=e.target.closest('a[data-subject]');if(sj)$('#c-subject').value=sj.dataset.subject;
+ const o=e.target.closest('[data-open]');if(o)openProp(o.dataset.open);
+ const p=e.target.closest('[data-post]');if(p)openPost(p.dataset.post);
+ const c=e.target.closest('[data-close]');if(c)c.closest('dialog').close();
+ if(e.target.tagName==='DIALOG')e.target.close();
+ const th=e.target.closest('[data-thumb]');if(th){const d=th.closest('.gal');$('.main img',d).src=th.dataset.thumb;$$('[data-thumb]',d).forEach(x=>x.setAttribute('aria-current',x===th))}
+});
+function openProp(id){const l=S.listings.find(x=>x.id===id);if(!l)return;const im=listImgs(l);
+ $('#pdbody').innerHTML=`<div class="pd"><div class="gal"><div class="main"><img src="${im[0]}" alt="${esc(l.title)}"></div><div class="thumbs">${im.map((s,i)=>`<button type="button" data-thumb="${s}" aria-current="${i===0}" aria-label="Photo ${i+1}"><img src="${s}" alt=""></button>`).join('')}</div></div>
+ <div class="info"><span class="kicker">${T(l.status)} · ${T(l.type)}${l.sample?' · '+T('sample'):''}</span><h3>${esc(l.title)}</h3><p class="note">${esc(l.location)}</p><div class="pr">${esc(fmt(l))}</div>
+ <div class="facts"><div><b>${+l.beds||0}</b><small>${T('beds')}</small></div><div><b>${+l.baths||0}</b><small>${T('baths')}</small></div><div><b>${(+l.sqft||0).toLocaleString()}</b><small>${T('sqft')}</small></div></div>
+ <p style="font-size:.92rem;color:#3a3833">${esc(l.desc||'')}</p>
+ <form class="f lead-form" data-type="property" data-source="Property: ${esc(l.title)}"><input type="hidden" name="listing" value="${esc(l.title)}">
+ <label>${T('name')}<input name="name" required autocomplete="name"></label><label>${T('email')}<input name="email" type="email" required autocomplete="email"></label><label>${T('phone')}<input name="phone" type="tel" autocomplete="tel"></label><label>${T('msg')}<textarea name="message" style="min-height:70px"></textarea></label>
+ <div class="hp"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+ <label class="chk"><input type="checkbox" name="consent" required><span>${T('cons')}</span></label><div class="fmsg" role="status"></div><button class="btn" type="submit">${T('tour')}</button></form></div></div>`;$('#pdlg').showModal()}
+function openPost(id){const p=S.posts.find(x=>x.id===id);if(!p)return;$('#postbody').innerHTML=`<img src="${postPic(p)}" alt="" style="width:100%;aspect-ratio:16/8;object-fit:cover;border-radius:4px;margin-bottom:1rem"><span class="kicker">${esc(p.tag||'')}</span><h3>${esc(p.title)}</h3>${(p.body||'').split(/\n+/).filter(Boolean).map(x=>`<p>${esc(x)}</p>`).join('')}`;$('#postdlg').showModal()}
+
+/* ---------- lead capture ---------- */
+document.addEventListener('submit',async e=>{const f=e.target;if(!f.matches('.lead-form'))return;e.preventDefault();const fd=new FormData(f),msg=$('.fmsg',f),now=new Date().toISOString();
+ if(fd.get('website')){f.reset();msg.innerHTML=`<div class="msg ok">${T('ok')}</div>`;return}
+ const cs=$('.chk span',f),src=f.dataset.source||'Website',lead={id:uid(),createdAt:now,type:f.dataset.type||'contact',source:src,name:String(fd.get('name')||'').trim().slice(0,120),email:String(fd.get('email')||'').trim().slice(0,200),phone:String(fd.get('phone')||'').trim().slice(0,60),message:String(fd.get('message')||'').trim().slice(0,4000),extra:{},status:'new',nextFollowUp:'',log:[{at:now,text:'Lead created from '+src}],consent:{given:true,text:cs?cs.textContent:'',at:now,page:location.href.split('#')[0],lang:L}};
+ ['address','timeline','subject','listing'].forEach(k=>{if(fd.get(k))lead.extra[k]=String(fd.get(k)).slice(0,300)});
+ S.leads.unshift(lead);save();
+ const ep=S.settings.formEndpoint;if(/^https:\/\//.test(ep||'')){try{await fetch(ep,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(lead)})}catch(err){}}
+ f.reset();msg.innerHTML=`<div class="msg ok">${T('ok')}</div>`;if(f.dataset.unlock){try{sessionStorage.setItem('jade_unlock','1')}catch(err){}const d=f.closest('dialog');if(d)d.close();if(location.hash==='#/buyers-guide')route();else location.hash='#/buyers-guide'}});
+
+/* ---------- cookies + back to top ---------- */
+const ck=$('#ckbar'),tt=$('#totop');
+const ckGet=()=>{try{return localStorage.getItem('jade_cookie')}catch(e){return null}};
+const ckSet=v=>{try{localStorage.setItem('jade_cookie',v)}catch(e){}ck.hidden=true};
+if(!ckGet())ck.hidden=false;
+$('#ckOk').onclick=()=>ckSet('all');$('#ckNo').onclick=()=>ckSet('essential');$('#ckPref').onclick=$('#ckReset').onclick=()=>{try{localStorage.removeItem('jade_cookie')}catch(e){}ck.hidden=false};
+window.addEventListener('scroll',()=>{tt.classList.toggle('on',window.scrollY>600)},{passive:true});
+tt.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+
+/* ---------- lead magnet popup (once) ---------- */
+let lmShown=false;const lmTry=()=>{if(lmShown||location.hash==='#admin'||document.querySelector('dialog[open]')||!ck.hidden||$('#admin').classList.contains('on'))return;let seen=null;try{seen=localStorage.getItem('jade_lm')}catch(e){}let u=null;try{u=sessionStorage.getItem('jade_unlock')}catch(e){}if(seen||u)return;lmShown=true;try{localStorage.setItem('jade_lm',String(Date.now()))}catch(e){}$('#lmdlg').showModal()};
+setTimeout(lmTry,40000);document.addEventListener('mouseleave',e=>{if(e.clientY<=0)lmTry()});
+
+/* ---------- router ---------- */
+const PAGES=$$('[data-page]').map(e=>e.dataset.page);
+const TITLES={home:'Jade Barkie | Real estate in Toronto'};
+function route(){const h=location.hash;if(h==='#admin')return;const m=h.match(/^#\/([\w-]*)/);let p;if(m)p=m[1]||'home';else{const k=h.slice(1);p=PAGES.includes(k)?k:'home'}if(!PAGES.includes(p))p='home';
+ $$('[data-page]').forEach(e=>e.hidden=e.dataset.page!==p);
+ const hd=$('[data-page="'+p+'"] h1');document.title=(p==='home'||!hd?TITLES.home:hd.textContent+' | Jade Barkie');
+ $$('nav.main a').forEach(x=>x.classList.toggle('cur',x.getAttribute('href')==='#/'+p));
+ if(p==='home'&&h.length>1&&!m){const e=document.getElementById(h.slice(1));if(e){e.scrollIntoView();return}}
+ window.scrollTo(0,0);renderSlots();guideState();mcCalc()}
+window.__route=route;
+function guideState(){let u=false;try{u=sessionStorage.getItem('jade_unlock')==='1'}catch(e){}const o=$('#gOpen');if(!o)return;o.hidden=!u;$('#gForm').hidden=u;$('#gLock').hidden=u}
+const cur=n=>new Intl.NumberFormat('en-CA',{style:'currency',currency:'CAD',maximumFractionDigits:0}).format(n);
+function mcCalc(){const g=id=>+$(id).value||0,P=g('#mc-price'),Dn=g('#mc-down'),r=g('#mc-rate')/100,y=g('#mc-am'),n=+$('#mc-freq').value,L=Math.max(0,P-Dn);
+ const pr=Math.pow(1+r/2,2/n)-1,N=y*n,pay=L===0?0:(pr===0?L/N:L*pr/(1-Math.pow(1+pr,-N)));
+ $('#mc-lbl').textContent=({12:'Monthly',26:'Bi-weekly',52:'Weekly'})[n]+' payment';$('#mc-pay').textContent=cur(pay);$('#mc-loan').textContent=cur(L);$('#mc-int').textContent=cur(Math.max(0,pay*N-L));
+ const pct=P?Dn/P*100:0;$('#mc-warn').textContent=Dn>P?'The down payment is higher than the price.':(pct<20?'Down payment is '+pct.toFixed(1)+'% of the price. Under 20% generally requires mortgage default insurance.':'')}
+$('#mcf').addEventListener('input',mcCalc);
+window.addEventListener('hashchange',route);
+
+/* ---------- boot ---------- */
+renderImages();applyLang();route();
+
+/* ================= ADMIN + CRM ================= */
+const A=$('#admin');let unlocked=false,tab='dash',fl={q:'',st:'all',src:'all'},draft=null,armed=null,fails=0,lockUntil=0;
+const STAT=['new','contacted','qualified','meeting','won','lost'];
+const cap=s=>s.charAt(0).toUpperCase()+s.slice(1);
+const today=()=>new Date().toISOString().slice(0,10);
+const dt=s=>{try{return new Date(s).toLocaleString('en-CA',{dateStyle:'medium',timeStyle:'short'})}catch(e){return s}};
+const sha=async s=>{try{const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}catch(e){let h=5381;for(const c of s)h=((h<<5)+h+c.charCodeAt(0))|0;return'x'+h}};
+function toast(m){let t=$('#toast');if(!t){t=document.createElement('div');t.id='toast';t.setAttribute('role','status');t.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#111;color:#fff;padding:.7rem 1.2rem;border-radius:4px;z-index:300;font-size:.85rem;max-width:90vw';document.body.appendChild(t)}t.textContent=m;t.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>t.hidden=true,3600)}
+function img2data(file,max=1400,q=.78,type='image/jpeg'){return new Promise((res,rej)=>{if(!/^image\//.test(file.type))return rej(new Error('Not an image'));const u=URL.createObjectURL(file),im=new Image();im.onload=()=>{const k=Math.min(1,max/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=Math.max(1,Math.round(im.width*k));c.height=Math.max(1,Math.round(im.height*k));c.getContext('2d').drawImage(im,0,0,c.width,c.height);URL.revokeObjectURL(u);res(c.toDataURL(type,q))};im.onerror=()=>{URL.revokeObjectURL(u);rej(new Error('Cannot read image'))};im.src=u})}
+const csvCell=v=>{let s=String(v==null?'':v);if(/^[=+\-@\t\r]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"'};
+function download(name,text,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500)}
+function twice(btn,fn){if(armed&&armed.b===btn){clearTimeout(armed.t);armed=null;fn();return}if(armed){clearTimeout(armed.t);armed.b.textContent=armed.o}armed={b:btn,o:btn.textContent,t:setTimeout(()=>{btn.textContent=armed&&armed.o;armed=null},3500)};btn.textContent='Click again to confirm'}
+
+function openAdmin(){A.classList.add('on');document.body.style.overflow='hidden';renderAdmin()}
+function closeAdmin(){A.classList.remove('on');document.body.style.overflow='';if(location.hash==='#admin')history.replaceState(null,'',location.pathname+location.search)}
+$('#adminBtn').onclick=()=>{location.hash='#admin'};
+function hashCheck(){if(location.hash==='#admin')openAdmin();else if(A.classList.contains('on'))closeAdmin();}
+window.addEventListener('hashchange',hashCheck);
+
+function renderAdmin(){
+ if(!S.pass){A.innerHTML=`<div class="login"><h3>Admin setup</h3><p class="note">Choose a passcode (at least 8 characters) to protect this admin area.</p><form id="ad-setup" class="ed" style="margin-top:1rem"><label>Passcode<input type="password" id="pw1" minlength="8" required autocomplete="new-password"></label><label>Confirm passcode<input type="password" id="pw2" minlength="8" required autocomplete="new-password"></label><div id="ad-err"></div><button class="btn" type="submit">Create passcode</button></form><div class="ad-warn" style="margin-top:1rem">This passcode only hides the admin screen in this browser. It is not real security: anyone using this browser can read the stored data. Do not keep sensitive client information here until a secure backend is connected.</div><p><button class="linkbtn" data-act="close">← Back to site</button></p></div>`;return}
+ if(!unlocked){A.innerHTML=`<div class="login"><h3>Admin</h3><p class="note">Enter your passcode.</p><form id="ad-login" class="ed" style="margin-top:1rem"><label>Passcode<input type="password" id="pw" required autocomplete="current-password"></label><div id="ad-err"></div><button class="btn" type="submit">Log in</button></form><p style="margin-top:1rem"><button class="linkbtn" data-act="close">← Back to site</button></p></div>`;return}
+ const tabs=[['dash','Dashboard'],['crm','CRM · Leads'],['listings','Listings'],['testimonials','Testimonials'],['blog','Blog'],['settings','Settings']];
+ A.innerHTML=`<div class="ad-top"><b>Admin · Jade Barkie</b><button class="btn ghost sm" data-act="close" style="color:#fff">View site</button><button class="btn ghost sm" data-act="logout" style="color:#fff">Log out</button></div><div class="ad-nav" role="tablist">${tabs.map(([k,t])=>`<button role="tab" data-act="tab" data-tab="${k}" aria-selected="${tab===k}">${t}${k==='crm'?` (${S.leads.length})`:''}</button>`).join('')}</div><div class="ad-main"><div class="ad-warn"><b>Local mode.</b> Leads sent from the public site are stored in the visitor's own browser, so they show up here only on that same browser. To receive every visitor's leads, add a form endpoint in Settings or connect a database. Use Settings › Backup to export your data.</div><div id="ad-body"></div></div>`;
+ body()}
+function body(){const b=$('#ad-body');if(!b)return;b.innerHTML={dash:vDash,crm:vCrm,listings:vListings,testimonials:vTesti,blog:vBlog,settings:vSettings}[tab]();$$('.ad-nav button').forEach(x=>x.setAttribute('aria-selected',x.dataset.tab===tab))}
+
+/* dashboard */
+function bars(o){const e=Object.entries(o),m=Math.max(1,...e.map(x=>x[1]));return e.length?`<div class="bars">${e.map(([k,v])=>`<div><span>${esc(k)}</span><i style="width:${Math.round(v/m*100)}%"></i><b>${v}</b></div>`).join('')}</div>`:'<p class="note">No data yet.</p>'}
+function vDash(){const ls=S.leads,w=Date.now()-7*864e5,by={},bs={};ls.forEach(l=>{const s=(l.source||'').split(':')[0];by[s]=(by[s]||0)+1;bs[cap(l.status)]=(bs[cap(l.status)]||0)+1});
+ const due=ls.filter(l=>l.nextFollowUp&&l.nextFollowUp<=today()&&l.status!=='won'&&l.status!=='lost');
+ return `<div class="kpis"><div class="kpi"><b>${ls.length}</b><small>Total leads</small></div><div class="kpi"><b>${ls.filter(l=>l.status==='new').length}</b><small>New</small></div><div class="kpi"><b>${ls.filter(l=>new Date(l.createdAt)>w).length}</b><small>Last 7 days</small></div><div class="kpi"><b>${ls.filter(l=>l.status==='won').length}</b><small>Won</small></div></div>
+ <div class="split" style="align-items:start;gap:1.2rem"><div class="panel"><h3>By source</h3>${bars(by)}</div><div class="panel"><h3>Pipeline</h3>${bars(bs)}</div></div>
+ <div class="panel"><h3>Follow-ups due (${due.length})</h3>${due.length?`<div class="tw"><table><tbody>${due.map(l=>`<tr class="click" data-act="lead" data-id="${esc(l.id)}"><td>${esc(l.name||l.email)}</td><td>${esc(l.nextFollowUp)}</td><td><span class="st ${l.status}">${l.status}</span></td></tr>`).join('')}</tbody></table></div>`:'<p class="note">Nothing due.</p>'}</div>
+ <div class="panel"><h3>Latest leads</h3><div class="tw">${ls.length?`<table><tbody>${ls.slice(0,6).map(l=>`<tr class="click" data-act="lead" data-id="${esc(l.id)}"><td>${esc(l.name||l.email)}</td><td>${esc(l.source)}</td><td>${dt(l.createdAt)}</td><td><span class="st ${l.status}">${l.status}</span></td></tr>`).join('')}</tbody></table>`:'<p class="note">No leads yet. Submit a form on the public site to test.</p>'}</div></div>`}
+
+/* CRM */
+function filtered(){const q=fl.q.toLowerCase();return S.leads.filter(l=>(fl.st==='all'||l.status===fl.st)&&(fl.src==='all'||(l.source||'').split(':')[0]===fl.src)&&(!q||[l.name,l.email,l.phone,l.message].join(' ').toLowerCase().includes(q)))}
+function tblLeads(){const a=filtered();return a.length?`<table><thead><tr><th>Date</th><th>Name</th><th>Contact</th><th>Source</th><th>Status</th><th>Follow-up</th></tr></thead><tbody>${a.map(l=>`<tr class="click" data-act="lead" data-id="${esc(l.id)}"><td>${dt(l.createdAt)}</td><td>${esc(l.name||'—')}</td><td>${esc(l.email)}<br><small>${esc(l.phone)}</small></td><td>${esc(l.source)}</td><td><span class="st ${l.status}">${l.status}</span></td><td>${esc(l.nextFollowUp||'')}</td></tr>`).join('')}</tbody></table>`:'<p class="empty">No leads match.</p>'}
+function vCrm(){const srcs=[...new Set(S.leads.map(l=>(l.source||'').split(':')[0]))];
+ return `<div class="tbar">${STAT.map(s=>`<button class="chip" data-act="fst" data-s="${s}" aria-pressed="${fl.st===s}">${cap(s)} ${S.leads.filter(l=>l.status===s).length}</button>`).join('')}<button class="chip" data-act="fst" data-s="all" aria-pressed="${fl.st==='all'}">All</button></div>
+ <div class="panel"><div class="tbar"><input id="ad-q" type="search" placeholder="Search name, email, phone, message" value="${esc(fl.q)}" aria-label="Search leads" style="min-width:260px"><select id="ad-src" aria-label="Source"><option value="all">All sources</option>${srcs.map(s=>`<option ${fl.src===s?'selected':''}>${esc(s)}</option>`).join('')}</select><span style="flex:1"></span><button class="btn sm" data-act="addlead">Add lead</button><button class="btn ghost sm" data-act="csv">Export CSV</button></div><div class="tw" id="ad-tbl">${tblLeads()}</div></div>`}
+function drawer(h){let d=$('#ad-drawer');if(!d){d=document.createElement('aside');d.id='ad-drawer';d.className='drawer';d.setAttribute('aria-label','Details');A.appendChild(d)}d.innerHTML=`<button class="dx" type="button" data-act="dclose" aria-label="Close" style="position:absolute;top:8px;right:8px;float:none">✕</button>`+h;d.scrollTop=0}
+function dclose(){const d=$('#ad-drawer');if(d)d.remove();draft=null}
+function openLead(id){const l=S.leads.find(x=>x.id===id);if(!l)return;const ex=Object.entries(l.extra||{});
+ drawer(`<h3>${esc(l.name||l.email||'Lead')}</h3><p class="note">${dt(l.createdAt)} · ${esc(l.source)}</p><div class="ed" data-id="${esc(l.id)}" style="margin-top:1rem">
+ <label>Name<input id="d-name" value="${esc(l.name)}"></label><div class="row"><label>Email<input id="d-email" type="email" value="${esc(l.email)}"></label><label>Phone<input id="d-phone" value="${esc(l.phone)}"></label></div>
+ <div class="row"><label>Status<select id="d-status">${STAT.map(s=>`<option ${l.status===s?'selected':''}>${s}</option>`).join('')}</select></label><label>Next follow-up<input id="d-fu" type="date" value="${esc(l.nextFollowUp||'')}"></label></div>
+ ${ex.length?`<div><b style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">Details</b>${ex.map(([k,v])=>`<p style="font-size:.88rem"><b>${esc(cap(k))}:</b> ${esc(v)}</p>`).join('')}</div>`:''}
+ ${l.message?`<div><b style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">Message</b><p style="white-space:pre-wrap;font-size:.9rem">${esc(l.message)}</p></div>`:''}
+ <div class="tbar"><button class="btn sm" data-act="savelead">Save</button>${l.email?`<a class="btn ghost sm" href="mailto:${esc(l.email)}">Email</a>`:''}${l.phone?`<a class="btn ghost sm" href="tel:${esc(l.phone.replace(/[^\d+]/g,''))}">Call</a>`:''}<button class="btn danger sm" data-act="dellead">Delete</button></div>
+ <label>Add a note<textarea id="d-note" style="min-height:70px"></textarea></label><button class="btn ghost sm" data-act="addnote" style="justify-self:start">Add note</button>
+ ${l.consent?`<p class="note">Consent: ${l.consent.given?'given':'not recorded'} · ${dt(l.consent.at)} · page ${esc(l.consent.page||'')}<br>“${esc(l.consent.text||'')}”</p>`:''}
+ <ul class="tl">${(l.log||[]).slice().reverse().map(x=>`<li><small>${dt(x.at)}</small>${esc(x.text)}</li>`).join('')}</ul></div>`)}
+function curLead(){const id=$('#ad-drawer .ed')?.dataset.id;return S.leads.find(x=>x.id===id)}
+function saveLead(){const l=curLead();if(!l)return;const st=$('#d-status').value,now=new Date().toISOString();l.name=$('#d-name').value.trim();l.email=$('#d-email').value.trim();l.phone=$('#d-phone').value.trim();l.nextFollowUp=$('#d-fu').value;if(st!==l.status){l.log.push({at:now,text:`Status: ${l.status} → ${st}`});l.status=st}save();toast('Saved');body();openLead(l.id)}
+
+/* listings */
+function vListings(){return `<div class="panel"><div class="tbar"><b style="font-family:var(--serif);font-size:1.2rem">${S.listings.length} listings</b><span style="flex:1"></span><button class="btn sm" data-act="newlisting">Add listing</button></div><div class="tw"><table><thead><tr><th></th><th>Title</th><th>Status</th><th>Price</th><th>Featured</th></tr></thead><tbody>${S.listings.map(l=>`<tr class="click" data-act="editlisting" data-id="${esc(l.id)}"><td style="width:92px"><img src="${listImgs(l)[0]}" alt="" style="width:80px;height:56px;object-fit:cover;border-radius:3px"></td><td>${esc(l.title)}${l.sample?' <small>(sample)</small>':''}<br><small>${esc(l.location)}</small></td><td>${esc(l.status)}</td><td>${esc(fmt(l))}</td><td>${l.featured?'★':''}</td></tr>`).join('')}</tbody></table></div></div>`}
+const sel=(id,opts,cur)=>`<select id="${id}">${opts.map(o=>{const[v,t]=Array.isArray(o)?o:[o,cap(o)];return `<option value="${esc(v)}" ${String(cur)===String(v)?'selected':''}>${esc(t)}</option>`}).join('')}</select>`;
+function thumbsEd(){return (draft.photos||[]).map((p,i)=>`<div><img src="${safeImg(p)}" alt=""><button type="button" data-act="rmphoto" data-i="${i}" aria-label="Remove photo">✕</button></div>`).join('')||'<p class="note">No photos yet: illustrations are shown. Upload real photos below.</p>'}
+function editListing(id){const l=id?S.listings.find(x=>x.id===id):{id:uid(),isNew:1,title:'',location:'',market:S.markets[0]?.id||'',type:'house',kind:'villa',status:'sale',price:0,cur:'CAD',beds:0,baths:0,sqft:0,featured:0,photos:[],desc:''};if(!l)return;draft=JSON.parse(JSON.stringify(l));
+ drawer(`<h3>${l.isNew?'New listing':'Edit listing'}</h3><div class="ed" style="margin-top:1rem"><label>Title<input id="e-title" value="${esc(l.title)}"></label><label>Location<input id="e-loc" value="${esc(l.location)}"></label>
+ <div class="row"><label>Market${sel('e-market',S.markets.map(m=>[m.id,m.name]),l.market)}</label><label>Type${sel('e-type',TYPES,l.type)}</label></div>
+ <div class="row"><label>Status${sel('e-status',['sale','sold','pending'],l.status)}</label><label>Illustration (when no photo)${sel('e-kind',['villa','house','tower','townhome','tropical','skyline'],l.kind)}</label></div>
+ <div class="row"><label>Price<input id="e-price" type="number" min="0" value="${+l.price||0}"></label><label>Currency${sel('e-cur',['CAD','USD','EUR','GBP'],l.cur)}</label></div>
+ <div class="row"><label>Beds<input id="e-beds" type="number" min="0" value="${+l.beds||0}"></label><label>Baths<input id="e-baths" type="number" min="0" value="${+l.baths||0}"></label></div>
+ <label>Square feet<input id="e-sqft" type="number" min="0" value="${+l.sqft||0}"></label>
+ <label class="chk"><input type="checkbox" id="e-feat" ${l.featured?'checked':''}> Featured (shown first and larger)</label>
+ <label>Description<textarea id="e-desc">${esc(l.desc)}</textarea></label>
+ <div><b style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">Photos</b><div class="thumbs-ed" id="ph-thumbs" style="margin:.5rem 0">${thumbsEd()}</div><input type="file" accept="image/*" multiple data-file="listing"><p class="note">Photos are resized to 1400 px and stored in this browser.</p></div>
+ <div class="tbar"><button class="btn sm" data-act="savelisting">Save</button>${l.isNew?'':'<button class="btn danger sm" data-act="dellisting">Delete</button>'}</div></div>`)}
+function saveListing(){const t=$('#e-title').value.trim();if(!t){toast('Title is required');return}const o=Object.assign(draft,{title:t,location:$('#e-loc').value.trim(),market:$('#e-market').value,type:$('#e-type').value,status:$('#e-status').value,kind:$('#e-kind').value,price:Math.max(0,+$('#e-price').value||0),cur:$('#e-cur').value,beds:+$('#e-beds').value||0,baths:+$('#e-baths').value||0,sqft:+$('#e-sqft').value||0,featured:$('#e-feat').checked?1:0,desc:$('#e-desc').value});
+ if((o.photos||[]).length)o.sample=0;const i=S.listings.findIndex(x=>x.id===o.id);delete o.isNew;if(i>=0)S.listings[i]=o;else S.listings.unshift(o);if(save()){toast('Listing saved');dclose();body();renderGrid()}}
+
+/* testimonials */
+function vTesti(){return `<div class="split" style="align-items:start;gap:1.2rem"><div class="panel"><h3>Testimonials (${S.testimonials.length})</h3>${S.testimonials.map(q=>`<div style="border-bottom:1px solid var(--line);padding:.7rem 0"><p style="font-size:.9rem">“${esc(q.text)}”</p><small>${esc(q.name)}${q.role?' · '+esc(q.role):''}${q.sample?' · sample':''}</small><div class="tbar" style="margin:.4rem 0 0"><button class="btn ghost sm" data-act="edittesti" data-id="${esc(q.id)}">Edit</button><button class="btn danger sm" data-act="deltesti" data-id="${esc(q.id)}">Delete</button></div></div>`).join('')}</div>
+ <div class="panel"><h3 id="tf-h">Add testimonial</h3><div class="ed"><input type="hidden" id="tf-id"><label>Client name<input id="tf-name"></label><label>Role (optional)<input id="tf-role" placeholder="Buyer, seller, coaching client"></label><label>Testimonial<textarea id="tf-text"></textarea></label><p class="note">Only publish real testimonials with the client's permission.</p><button class="btn sm" data-act="savetesti" style="justify-self:start">Save</button></div></div></div>`}
+/* blog */
+function vBlog(){return `<div class="split" style="align-items:start;gap:1.2rem"><div class="panel"><h3>Posts (${S.posts.length})</h3>${S.posts.map(p=>`<div style="border-bottom:1px solid var(--line);padding:.7rem 0"><b>${esc(p.title)}</b>${p.sample?' <small>(sample)</small>':''}<div class="tbar" style="margin:.4rem 0 0"><button class="btn ghost sm" data-act="editpost" data-id="${esc(p.id)}">Edit</button><button class="btn danger sm" data-act="delpost" data-id="${esc(p.id)}">Delete</button></div></div>`).join('')}</div>
+ <div class="panel"><h3 id="pf-h">Add post</h3><div class="ed"><input type="hidden" id="pf-id"><label>Title<input id="pf-title"></label><label>Tag<input id="pf-tag" placeholder="Real estate, Business, Community"></label><label>Illustration (no image)${sel('pf-kind',['villa','house','tower','townhome','tropical','skyline'],'villa')}</label><label>Body (blank line between paragraphs)<textarea id="pf-body" style="min-height:160px"></textarea></label><div><div class="thumbs-ed" id="pf-img"></div><input type="file" accept="image/*" data-file="post"></div><button class="btn sm" data-act="savepost" style="justify-self:start">Save</button></div></div></div>`}
+let postImg='';
+/* settings */
+function vSettings(){const s=S.settings,i=(k,l,t='text')=>`<label>${l}<input id="st-${k}" type="${t}" value="${esc(s[k])}"></label>`;
+ return `<div class="split" style="align-items:start;gap:1.2rem"><div class="panel"><h3>Site settings</h3><div class="ed">${i('phone','Office phone')}${i('address','Office address')}${i('email','Email','email')}${i('instagram','Instagram handle (no @)')}${i('brokerage','Registered brokerage name (shown in footer)')}${i('linkedin','LinkedIn URL (https)')}${i('facebook','Facebook URL (https)')}${i('formEndpoint','Form endpoint (https) — receives every lead as JSON')}
+ <label>Bio (English)<textarea id="st-bio_en" style="min-height:130px">${esc(s.bio_en)}</textarea></label>
+ <label>Markets (one per line: Name | Tag | scene — scene is one of skyline, tropical, house, tower, villa, townhome)<textarea id="st-markets" style="min-height:110px">${esc(S.markets.map(m=>`${m.name} | ${m.tag} | ${m.kind}`).join('\n'))}</textarea></label>
+ <label class="chk"><input type="checkbox" id="st-showBanner" ${s.showBanner?'checked':''}> Show the “design preview” banner</label>
+ ${IMGS.map(([k,l])=>`<div><b style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">${l}</b><div class="thumbs-ed" style="margin:.4rem 0;${k==='logo'?'':''}">${s[k]?`<div style="${k==='logo'?'background:#555;width:140px':''}"><img src="${safeImg(s[k])}" alt=""${k==='logo'?' style="object-fit:contain"':''}><button type="button" data-act="rmimg" data-k="${k}">✕</button></div>`:'<p class="note">Default</p>'}</div><input type="file" accept="image/*" data-file="img" data-k="${k}"></div>`).join('')}
+ <button class="btn sm" data-act="savesettings" style="justify-self:start">Save settings</button></div></div>
+ <div><div class="panel"><h3>Passcode</h3><div class="ed"><label>New passcode (8+ characters)<input id="np" type="password" minlength="8" autocomplete="new-password"></label><button class="btn ghost sm" data-act="setpw" style="justify-self:start">Change passcode</button></div></div>
+ <div class="panel"><h3>Backup</h3><div class="ed"><p class="note">Export includes leads, listings and photos. It does not include the passcode.</p><div class="tbar"><button class="btn sm" data-act="export">Export JSON</button><label class="btn ghost sm" style="cursor:pointer">Import JSON<input type="file" accept="application/json,.json" data-file="import" class="sr"></label></div><button class="btn danger sm" data-act="reset" style="justify-self:start">Reset demo data</button></div></div></div></div>`}
+function saveSettings(){const v=k=>$('#st-'+k).value.trim(),s=S.settings;for(const k of['linkedin','facebook','formEndpoint']){if(v(k)&&!/^https:\/\//.test(v(k))){toast(k+' must start with https://');return}}
+ ['phone','address','email','instagram','brokerage','linkedin','facebook','formEndpoint'].forEach(k=>s[k]=v(k));s.bio_en=$('#st-bio_en').value.trim();s.showBanner=$('#st-showBanner').checked;
+ const ms=$('#st-markets').value.split('\n').map(x=>x.split('|').map(y=>y.trim())).filter(x=>x[0]).slice(0,8).map(x=>({id:x[0].toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||uid(),name:x[0],tag:x[1]||'',kind:BUILD[x[2]]?x[2]:'villa'}));if(ms.length)S.markets=ms;
+ if(save()){toast('Settings saved');renderAll();renderCI();renderImages()}}
+
+/* delegated admin events */
+A.addEventListener('submit',async e=>{e.preventDefault();const id=e.target.id;
+ if(id==='ad-setup'){const a=$('#pw1').value,b=$('#pw2').value,er=$('#ad-err');if(a.length<8){er.innerHTML='<div class="msg err">At least 8 characters.</div>';return}if(a!==b){er.innerHTML='<div class="msg err">Passcodes do not match.</div>';return}const salt=uid();S.pass={salt,hash:await sha(salt+a)};save();unlocked=true;renderAdmin()}
+ if(id==='ad-login'){const er=$('#ad-err');if(Date.now()<lockUntil){er.innerHTML=`<div class="msg err">Too many attempts. Wait ${Math.ceil((lockUntil-Date.now())/1000)} s.</div>`;return}if(await sha(S.pass.salt+$('#pw').value)===S.pass.hash){fails=0;unlocked=true;renderAdmin()}else{fails++;if(fails>=5){lockUntil=Date.now()+30000;fails=0}er.innerHTML='<div class="msg err">Wrong passcode.</div>'}}});
+A.addEventListener('input',e=>{if(e.target.id==='ad-q'){fl.q=e.target.value;$('#ad-tbl').innerHTML=tblLeads()}});
+A.addEventListener('change',async e=>{const t=e.target;
+ if(t.id==='ad-src'){fl.src=t.value;$('#ad-tbl').innerHTML=tblLeads();return}
+ const k=t.dataset.file;if(!k||!t.files||!t.files.length)return;
+ try{if(k==='import'){const o=JSON.parse(await t.files[0].text());if(!o||!Array.isArray(o.leads)||!Array.isArray(o.listings)||!o.settings)throw new Error('Not a valid backup');const pass=S.pass;S=Object.assign(seed(),o);S.pass=pass;if(save()){toast('Imported');renderAll();renderImages();renderCI();body()}return}
+  if(k==='listing'){for(const f of t.files)draft.photos.push(await img2data(f,1400,.78));$('#ph-thumbs').innerHTML=thumbsEd()}
+  else if(k==='post'){postImg=await img2data(t.files[0],1400,.78);$('#pf-img').innerHTML=`<div><img src="${postImg}" alt=""></div>`}
+  else if(k==='img'){const key=t.dataset.k;S.settings[key]=key==='logo'?await img2data(t.files[0],500,1,'image/png'):await img2data(t.files[0],(key==='hero'||key==='band')?1800:1200,.8);if(save()){renderAbout();renderImages();body()}}
+ }catch(err){toast(err.message||'Upload failed')}t.value=''});
+A.addEventListener('click',e=>{const b=e.target.closest('[data-act]');if(!b)return;const a=b.dataset.act,id=b.dataset.id;
+ switch(a){
+ case'close':closeAdmin();break;
+ case'logout':unlocked=false;dclose();renderAdmin();break;
+ case'tab':tab=b.dataset.tab;dclose();body();break;
+ case'dclose':dclose();break;
+ case'fst':fl.st=b.dataset.s;body();break;
+ case'lead':openLead(id);break;
+ case'addlead':{const now=new Date().toISOString(),l={id:uid(),createdAt:now,type:'manual',source:'Manual',name:'New lead',email:'',phone:'',message:'',extra:{},status:'new',nextFollowUp:'',log:[{at:now,text:'Lead added manually'}],consent:null};S.leads.unshift(l);save();body();openLead(l.id);break}
+ case'savelead':saveLead();break;
+ case'addnote':{const l=curLead(),n=$('#d-note').value.trim();if(l&&n){l.log.push({at:new Date().toISOString(),text:'Note: '+n});save();openLead(l.id)}break}
+ case'dellead':twice(b,()=>{const l=curLead();if(l){S.leads=S.leads.filter(x=>x.id!==l.id);save();dclose();body();toast('Lead deleted')}});break;
+ case'csv':{const cols=['createdAt','name','email','phone','type','source','status','nextFollowUp','message','address','timeline','subject','listing','consentAt'],rows=[cols.join(',')].concat(S.leads.map(l=>[l.createdAt,l.name,l.email,l.phone,l.type,l.source,l.status,l.nextFollowUp,l.message,l.extra?.address,l.extra?.timeline,l.extra?.subject,l.extra?.listing,l.consent?.at].map(csvCell).join(',')));download('jade-leads-'+today()+'.csv','﻿'+rows.join('\r\n'),'text/csv;charset=utf-8');break}
+ case'newlisting':editListing(null);break;
+ case'editlisting':editListing(id);break;
+ case'savelisting':saveListing();break;
+ case'dellisting':twice(b,()=>{S.listings=S.listings.filter(x=>x.id!==draft.id);save();dclose();body();renderGrid();toast('Listing deleted')});break;
+ case'rmphoto':draft.photos.splice(+b.dataset.i,1);$('#ph-thumbs').innerHTML=thumbsEd();break;
+ case'edittesti':{const q=S.testimonials.find(x=>x.id===id);if(q){$('#tf-h').textContent='Edit testimonial';$('#tf-id').value=q.id;$('#tf-name').value=q.name;$('#tf-role').value=q.role||'';$('#tf-text').value=q.text}break}
+ case'savetesti':{const n=$('#tf-name').value.trim(),t=$('#tf-text').value.trim();if(!n||!t){toast('Name and text are required');break}const q={id:$('#tf-id').value||uid(),name:n,role:$('#tf-role').value.trim(),text:t,sample:0},i=S.testimonials.findIndex(x=>x.id===q.id);if(i>=0)S.testimonials[i]=q;else S.testimonials.unshift(q);if(save()){body();renderQuotes();toast('Saved')}break}
+ case'deltesti':twice(b,()=>{S.testimonials=S.testimonials.filter(x=>x.id!==id);save();body();renderQuotes()});break;
+ case'editpost':{const p=S.posts.find(x=>x.id===id);if(p){$('#pf-h').textContent='Edit post';$('#pf-id').value=p.id;$('#pf-title').value=p.title;$('#pf-tag').value=p.tag||'';$('#pf-kind').value=p.kind||'villa';$('#pf-body').value=p.body||'';postImg=safeImg(p.image);$('#pf-img').innerHTML=postImg?`<div><img src="${postImg}" alt=""></div>`:''}break}
+ case'savepost':{const t=$('#pf-title').value.trim();if(!t){toast('Title is required');break}const p={id:$('#pf-id').value||uid(),title:t,tag:$('#pf-tag').value.trim(),kind:$('#pf-kind').value,body:$('#pf-body').value.trim(),image:postImg,sample:0},i=S.posts.findIndex(x=>x.id===p.id);if(i>=0)S.posts[i]=p;else S.posts.unshift(p);postImg='';if(save()){body();renderPosts();toast('Saved')}break}
+ case'delpost':twice(b,()=>{S.posts=S.posts.filter(x=>x.id!==id);save();body();renderPosts()});break;
+ case'savesettings':saveSettings();break;
+ case'rmimg':S.settings[b.dataset.k]='';save();renderAbout();renderImages();body();break;
+ case'setpw':{const p=$('#np').value;if(p.length<8){toast('At least 8 characters');break}sha(uid()+p).then(()=>{});const salt=uid();sha(salt+p).then(h=>{S.pass={salt,hash:h};save();$('#np').value='';toast('Passcode changed')});break}
+ case'export':{const o=Object.assign({},S);delete o.pass;download('jade-backup-'+today()+'.json',JSON.stringify(o),'application/json');break}
+ case'reset':twice(b,()=>{const pass=S.pass;S=seed();S.pass=pass;save();renderAll();renderImages();renderCI();body();toast('Demo data restored')});break;
+ }});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&A.classList.contains('on')&&$('#ad-drawer'))dclose()});
+hashCheck();
+})();
+
+</script>
+</body>
+</html>
